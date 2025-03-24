@@ -1,0 +1,113 @@
+{
+    "navbar": {
+      "home": "Inicio",
+      "about": "Nosotros",
+      "services": "Servicios",
+      "projects": "Proyectos",
+      "brands": "Marcas",
+      "testimonials": "Testimonios",
+      "contact": "Contacto"
+    },
+    "home": {
+      "hero": {
+        "title": "SOLUCIONES TÉCNICAS DE ELEVADORES",
+        "subtitle": "Sirviendo a todo el sur de Florida",
+        "cta": "Solicitar Cotización"
+      },
+      "about": {
+        "title": "Sobre Nosotros",
+        "description": "Elevator Tech Solutions es un contratista de elevadores con licencia, seguro y certificado, especializado en instalación, reparaciones y mantenimiento de elevadores comerciales y residenciales. Con más de 20 años de experiencia, nuestro equipo de técnicos certificados brinda un servicio excepcional en todo el sur de Florida. Priorizamos la seguridad, confiabilidad y satisfacción del cliente en todos nuestros proyectos.",
+        "link": "Conocer Más"
+      },
+      "services": {
+        "title": "Nuestros Servicios",
+        "item1": "Reparación de Elevadores",
+        "item2": "Certificación de Elevadores",
+        "item3": "Instalación de Elevadores",
+        "item4": "Mantenimiento Preventivo",
+        "cta": "Ver Todos los Servicios"
+      },
+      "projects": {
+        "title": "Nuestros Proyectos",
+        "cta": "Ver Todos los Proyectos"
+      },
+      "testimonials": {
+        "title": "Qué Dicen Nuestros Clientes",
+        "quote1": "Elevator Tech Solutions ha estado manteniendo los elevadores de nuestro edificio durante los últimos tres años, y no podríamos estar más satisfechos con su servicio. Siempre son puntuales, profesionales y minuciosos.",
+        "author1": "John Smith, Administrador de Propiedades",
+        "quote2": "Después de luchar durante años con un servicio de elevadores poco confiable, cambiamos a Elevator Tech Solutions y no hemos tenido problemas desde entonces. Su equipo es conocedor y receptivo.",
+        "author2": "Maria Rodriguez, Presidenta de la HOA"
+      },
+      "brands": {
+        "title": "Marcas con las que Trabajamos"
+      },
+      "contact": {
+        "title": "Contáctenos",
+        "name": "Su Nombre",
+        "email": "Su Correo Electrónico",
+        "message": "Su Mensaje",
+        "cta": "Enviar Mensaje"
+      }
+    },
+    "about": {
+      "title": "Sobre Nosotros",
+      "subtitle": "Tus Expertos en Elevadores de Confianza",
+      "description": "Con años de experiencia en la industria de elevadores, proporcionamos servicios de alta calidad para instalación, mantenimiento y reparación de todo tipo de elevadores. Nuestro equipo de técnicos certificados está comprometido con garantizar la seguridad y fiabilidad de sus sistemas de elevadores."
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "installation": {
+        "title": "Instalación",
+        "description": "Instalación profesional de nuevos sistemas de elevadores para edificios residenciales y comerciales."
+      },
+      "maintenance": {
+        "title": "Mantenimiento",
+        "description": "Servicios de mantenimiento regular para asegurar que sus elevadores funcionen de manera segura y eficiente."
+      },
+      "repair": {
+        "title": "Reparación",
+        "description": "Servicios de reparación rápidos y confiables para todas las marcas y modelos de elevadores."
+      },
+      "modernization": {
+        "title": "Modernización",
+        "description": "Actualice sus sistemas de elevadores existentes con la última tecnología y características de seguridad."
+      },
+      "inspection": {
+        "title": "Inspección",
+        "description": "Inspecciones de seguridad exhaustivas para garantizar el cumplimiento de todas las regulaciones."
+      }
+    },
+    "projects": {
+      "title": "Nuestros Proyectos",
+      "subtitle": "Algunas de nuestras recientes instalaciones y modernizaciones de elevadores.",
+      "viewProject": "Ver Proyecto",
+      "noProjects": "Aún no hay proyectos para mostrar."
+    },
+    "brands": {
+      "title": "Marcas con las que Trabajamos",
+      "subtitle": "Nos asociamos con los fabricantes líderes de la industria para proporcionar las mejores soluciones de elevadores."
+    },
+    "testimonials": {
+      "title": "Testimonios",
+      "subtitle": "Lo que nuestros clientes dicen sobre nosotros"
+    },
+    "contact": {
+      "title": "Contáctenos",
+      "subtitle": "Póngase en contacto con nuestro equipo para una consulta gratuita",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "message": "Mensaje",
+      "submit": "Enviar",
+      "address": "Dirección",
+      "phone_label": "Teléfono",
+      "email_label": "Correo electrónico",
+      "location": "Miami, FL",
+      "success": "¡Su mensaje ha sido enviado con éxito!",
+      "error": "Hubo un error al enviar su mensaje. Por favor, inténtelo de nuevo."
+    },
+    "footer": {
+      "rights": "Todos los derechos reservados",
+      "company": "Soluciones Técnicas de Elevadores"
+    }
+  }

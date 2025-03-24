@@ -1,28 +1,14 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useLanguage } from "../context/LanguageContext";
-import LanguageSelector from "./LanguageSelector";
+import { useTranslation } from "react-i18next";
 import logo from "/images/logo.png";
+import LanguageSelector from "./LanguageSelector";
 
 const Navbar = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const { language } = useLanguage();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const navItems = [
-    { name: language === "en" ? "Home" : "Inicio", path: "/" },
-    { name: language === "en" ? "About" : "Sobre Nosotros", path: "/about" },
-    { name: language === "en" ? "Services" : "Servicios", path: "/services" },
-    { name: language === "en" ? "Projects" : "Proyectos", path: "/projects" },
-    { name: language === "en" ? "Brands" : "Marcas", path: "/brands" },
-    { name: language === "en" ? "Testimonials" : "Testimonios", path: "/testimonials" },
-    { name: language === "en" ? "Contact" : "Contacto", path: "/contact" },
-  ];
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <nav
@@ -31,52 +17,87 @@ const Navbar = () => {
       }`}
     >
       <Link to="/">
-        <img src={logo} alt="Elevator Tech Solutions Logo" className="h-10" />
+        <img src={logo} alt="Logo" className="h-10" />
       </Link>
       
-      {/* Desktop Menu */}
-      <div className="hidden md:flex items-center space-x-6">
-        {navItems.map((item) => (
-          <Link
-            key={item.path}
-            to={item.path}
-            className={`font-sf text-sm ${
-              isHome ? "text-white hover:text-blue-300" : "text-white hover:text-blue-300"
-            } ${location.pathname === item.path ? "font-bold" : ""}`}
-          >
-            {item.name}
-          </Link>
-        ))}
+      <div className="flex items-center space-x-4">
         <LanguageSelector />
+        <button 
+          className="text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <i className={menuOpen ? "ri-close-line" : "ri-menu-line"}></i>
+        </button>
       </div>
       
-      {/* Mobile Menu Button */}
-      <button
-        className="text-2xl md:hidden text-white"
-        onClick={toggleMenu}
-        aria-label="Toggle menu"
-      >
-        <i className={`ri-${isMenuOpen ? "close" : "menu"}-line`}></i>
-      </button>
-      
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-gray-800 text-white py-4 md:hidden shadow-lg">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`block py-2 px-4 text-sm hover:bg-gray-700 ${
-                location.pathname === item.path ? "font-bold bg-gray-700" : ""
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-          <div className="px-4 py-2">
-            <LanguageSelector />
-          </div>
+      {/* Menú desplegable */}
+      {menuOpen && (
+        <div className="absolute top-full right-0 bg-gray-800 text-white p-4 w-48 rounded-md shadow-lg">
+          <ul className="space-y-2">
+            <li>
+              <Link 
+                to="/" 
+                className="block hover:text-yellow-500 transition"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t('navbar.home')}
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/about" 
+                className="block hover:text-yellow-500 transition"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t('navbar.about')}
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/services" 
+                className="block hover:text-yellow-500 transition"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t('navbar.services')}
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/projects" 
+                className="block hover:text-yellow-500 transition"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t('navbar.projects')}
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/brands" 
+                className="block hover:text-yellow-500 transition"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t('navbar.brands')}
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/testimonials" 
+                className="block hover:text-yellow-500 transition"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t('navbar.testimonials')}
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/contact" 
+                className="block hover:text-yellow-500 transition"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t('navbar.contact')}
+              </Link>
+            </li>
+          </ul>
         </div>
       )}
     </nav>
