@@ -5,6 +5,17 @@ import { useLanguage } from "../context/LanguageContext";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next"; // Asegúrate de importar esto
 import BrandCarousel from "../components/BrandCarousel";
+import backgroundImage from "/images/home_fondo.webp";
+import aboutImage from "/images/rectangle1.webp";
+import projectimage1 from "/images/rectangle2.webp";
+import projectimage2 from "/images/rectangle3.webp";
+import projectimage3 from "/images/rectangle4.webp";
+import projectimage4 from "/images/rectangle5.webp";
+import projectimage5 from "/images/rectangle6.webp";
+import projectimage6 from "/images/rectangle7.webp";
+
+
+
 const Home = () => {
   const { language } = useLanguage();
   const { t } = useTranslation(); // Hook para traducciones
@@ -34,7 +45,7 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section - Matches Figma design */}
-      <section className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url(./images/home_fondo.webp)` }}>
+      <section className="relative h-screen bg-cover bg-center" id="home" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="absolute inset-0 bg-[#050f22] bg-opacity-20"></div>
         <div className="absolute top-[246px] left-[24px] w-[373px] h-[198px] flex flex-col justify-between z-10">
           <div>
@@ -83,7 +94,7 @@ const Home = () => {
               </Link>
             </div>
             <div className="md:w-1/2">
-              <img src="./images/rectangle2.webp" alt="Elevator maintenance" className="w-full h-auto rounded-lg shadow-lg" />
+              <img src={aboutImage} alt="Elevator maintenance" className="w-full h-auto rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
@@ -170,26 +181,26 @@ const Home = () => {
             {/* First column of projects */}
             <div className="space-y-6">
               <div className="h-40 bg-[#213b6a] rounded-lg overflow-hidden relative">
-                <img src="/api/placeholder/169/145" alt="Project 1" className="w-full h-full object-cover opacity-80" />
+                <img src={projectimage1} alt="Project 1" className="w-full h-full object-cover opacity-80" />
               </div>
               <div className="h-64 bg-[#213b6a] rounded-lg overflow-hidden relative">
-                <img src="/api/placeholder/169/270" alt="Project 2" className="w-full h-full object-cover opacity-80" />
+                <img src={projectimage3} alt="Project 2" className="w-full h-full object-cover opacity-80" />
               </div>
               <div className="h-64 bg-[#213b6a] rounded-lg overflow-hidden relative">
-                <img src="/api/placeholder/169/270" alt="Project 3" className="w-full h-full object-cover opacity-80" />
+                <img src={projectimage5} alt="Project 3" className="w-full h-full object-cover opacity-80" />
               </div>
             </div>
             
             {/* Second column of projects */}
             <div className="space-y-6">
               <div className="h-64 bg-[#213b6a] rounded-lg overflow-hidden relative">
-                <img src="/api/placeholder/169/270" alt="Project 4" className="w-full h-full object-cover opacity-80" />
+                <img src={projectimage2} alt="Project 4" className="w-full h-full object-cover opacity-80" />
               </div>
               <div className="h-64 bg-[#213b6a] rounded-lg overflow-hidden relative">
-                <img src="/api/placeholder/169/270" alt="Project 5" className="w-full h-full object-cover opacity-80" />
+                <img src={projectimage4} alt="Project 5" className="w-full h-full object-cover opacity-80" />
               </div>
               <div className="h-40 bg-[#213b6a] rounded-lg overflow-hidden relative">
-                <img src="/api/placeholder/169/145" alt="Project 6" className="w-full h-full object-cover opacity-80" />
+                <img src={projectimage6} alt="Project 6" className="w-full h-full object-cover opacity-80" />
               </div>
             </div>
           </div>
