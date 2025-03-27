@@ -90,15 +90,7 @@ const Navbar = () => {
                 {t("navbar.services")}
               </Link>
             </li>
-            <li>
-              <Link
-                to="/projects"
-                className="block hover:text-yellow-500 transition"
-                onClick={() => setMenuOpen(false)}
-              >
-                {t("navbar.projects")}
-              </Link>
-            </li>
+            
             <li>
               <Link
                 to="/brands"
