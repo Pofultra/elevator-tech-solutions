@@ -13,40 +13,76 @@ const Services = () => {
       intro: "We offer a comprehensive range of elevator services to meet all your needs:",
       services: [
         {
-          title: "Installation",
-          description: "Expert installation of new elevator systems for residential and commercial buildings.",
-          icon: "ri-building-line",
-          features: ["Professional team", "Quality equipment", "On-time completion", "Safety compliance"]
-        },
-        {
-          title: "Maintenance",
-          description: "Regular maintenance to ensure your elevator systems run smoothly and safely.",
+          title: "Elevator Repairs",
+          description: "Fast and reliable repair services for all types of elevator systems to minimize downtime.",
           icon: "ri-tools-line",
-          features: ["Preventive maintenance", "24/7 emergency service", "Detailed inspections", "Performance optimization"]
+          features: ["24/7 emergency response", "Complete system diagnosis", "Genuine replacement parts", "All elevator brands serviced"]
         },
         {
-          title: "Repair",
-          description: "Quick and efficient repair services to minimize downtime and restore functionality.",
-          icon: "ri-service-line",
-          features: ["Fast response times", "Genuine parts", "Expert diagnostics", "Warranty on repairs"]
+          title: "Elevator Certification",
+          description: "Professional certification services to ensure your elevators meet all local and state regulations.",
+          icon: "ri-certified-line",
+          features: ["Annual inspections", "Documentation preparation", "Code compliance verification", "Safety certification"]
         },
         {
-          title: "Modernization",
-          description: "Update your existing elevator systems with the latest technology and safety features.",
-          icon: "ri-refresh-line",
-          features: ["Energy efficiency", "Enhanced safety", "Improved performance", "Modern aesthetics"]
+          title: "Violations Corrections",
+          description: "Expert solutions to address and resolve elevator code violations promptly and effectively.",
+          icon: "ri-error-warning-line",
+          features: ["Comprehensive violation assessment", "Correction plan development", "Swift implementation", "Regulatory compliance"]
         },
         {
-          title: "Inspection",
-          description: "Thorough inspections to ensure compliance with all safety regulations and standards.",
-          icon: "ri-search-line",
-          features: ["Compliance verification", "Detailed reports", "Risk assessment", "Certification"]
-        },
-        {
-          title: "Consultation",
-          description: "Expert advice on elevator systems for new construction or renovation projects.",
+          title: "Elevator Consulting",
+          description: "Professional guidance for elevator systems in new construction or renovation projects.",
           icon: "ri-question-answer-line",
-          features: ["Design assistance", "Traffic analysis", "Cost estimation", "Project planning"]
+          features: ["System recommendations", "Budget planning", "Technical specifications", "Project oversight"]
+        },
+        {
+          title: "Door Lock Monitoring System Installation",
+          description: "Advanced door lock monitoring systems for enhanced elevator safety and security.",
+          icon: "ri-door-lock-box-line",
+          features: ["Code-compliant systems", "Real-time monitoring", "Malfunction alerts", "Enhanced passenger safety"]
+        },
+        {
+          title: "3D Proximity Edge Installation",
+          description: "State-of-the-art 3D proximity edge technology for improved door safety and operation.",
+          icon: "ri-sensor-line",
+          features: ["Advanced obstacle detection", "Reduced door incidents", "Seamless integration", "Extended equipment life"]
+        },
+        {
+          title: "Electrical Work For Elevator Modernizations",
+          description: "Comprehensive electrical services specifically for elevator system modernizations.",
+          icon: "ri-plug-line",
+          features: ["Wiring upgrades", "Control system updates", "Power supply modifications", "Code-compliant installations"]
+        },
+        {
+          title: "Upgrade Electrical Main Disconnect In Machine Room",
+          description: "Professional upgrades for machine room electrical disconnects to improve safety and reliability.",
+          icon: "ri-switch-line",
+          features: ["Modern safety features", "Code compliance", "Improved maintenance access", "Enhanced system protection"]
+        },
+        {
+          title: "Door Equipment Replacement",
+          description: "Complete replacement services for worn or outdated elevator door equipment.",
+          icon: "ri-door-open-line",
+          features: ["High-quality components", "Improved door operation", "Reduced noise levels", "Enhanced reliability"]
+        },
+        {
+          title: "Safety Edge Installation (Proximity)",
+          description: "Installation of proximity safety edges to prevent door closing accidents and improve operation.",
+          icon: "ri-safe-line",
+          features: ["Advanced sensor technology", "Non-contact detection", "Easy maintenance", "Extended service life"]
+        },
+        {
+          title: "GAL Door Operator Upgrade",
+          description: "Specialized upgrades for GAL door operators to enhance performance and reliability.",
+          icon: "ri-settings-line",
+          features: ["Latest GAL technology", "Improved door timing", "Reduced mechanical wear", "Enhanced passenger experience"]
+        },
+        {
+          title: "Cellular Phone Installation",
+          description: "Installation of reliable cellular phone systems in elevators for emergency communications.",
+          icon: "ri-phone-line",
+          features: ["Code-compliant systems", "Clear communication", "Reliable connectivity", "24/7 monitoring capability"]
         }
       ],
       cta: "Contact us today for a free consultation",
@@ -62,40 +98,76 @@ const Services = () => {
       intro: "Ofrecemos una amplia gama de servicios para elevadores para satisfacer todas sus necesidades:",
       services: [
         {
-          title: "Instalación",
-          description: "Instalación experta de nuevos sistemas de elevadores para edificios residenciales y comerciales.",
-          icon: "ri-building-line",
-          features: ["Equipo profesional", "Equipamiento de calidad", "Finalización a tiempo", "Cumplimiento de seguridad"]
-        },
-        {
-          title: "Mantenimiento",
-          description: "Mantenimiento regular para garantizar que sus sistemas de elevadores funcionen sin problemas y de manera segura.",
+          title: "Reparación de Elevadores",
+          description: "Servicios de reparación rápidos y confiables para todo tipo de sistemas de elevadores para minimizar el tiempo de inactividad.",
           icon: "ri-tools-line",
-          features: ["Mantenimiento preventivo", "Servicio de emergencia 24/7", "Inspecciones detalladas", "Optimización del rendimiento"]
+          features: ["Respuesta de emergencia 24/7", "Diagnóstico completo del sistema", "Piezas de repuesto genuinas", "Servicio para todas las marcas de elevadores"]
         },
         {
-          title: "Reparación",
-          description: "Servicios de reparación rápidos y eficientes para minimizar el tiempo de inactividad y restaurar la funcionalidad.",
-          icon: "ri-service-line",
-          features: ["Tiempos de respuesta rápidos", "Piezas originales", "Diagnósticos expertos", "Garantía en reparaciones"]
+          title: "Certificación de Elevadores",
+          description: "Servicios profesionales de certificación para garantizar que sus elevadores cumplan con todas las regulaciones locales y estatales.",
+          icon: "ri-certified-line",
+          features: ["Inspecciones anuales", "Preparación de documentación", "Verificación de cumplimiento de códigos", "Certificación de seguridad"]
         },
         {
-          title: "Modernización",
-          description: "Actualice sus sistemas de elevadores existentes con la última tecnología y características de seguridad.",
-          icon: "ri-refresh-line",
-          features: ["Eficiencia energética", "Seguridad mejorada", "Rendimiento mejorado", "Estética moderna"]
+          title: "Correcciones de Violaciones",
+          description: "Soluciones expertas para abordar y resolver violaciones de código de elevadores de manera rápida y efectiva.",
+          icon: "ri-error-warning-line",
+          features: ["Evaluación integral de violaciones", "Desarrollo de plan de corrección", "Implementación rápida", "Cumplimiento normativo"]
         },
         {
-          title: "Inspección",
-          description: "Inspecciones exhaustivas para garantizar el cumplimiento de todas las normas y estándares de seguridad.",
-          icon: "ri-search-line",
-          features: ["Verificación de cumplimiento", "Informes detallados", "Evaluación de riesgos", "Certificación"]
-        },
-        {
-          title: "Consultoría",
-          description: "Asesoramiento experto sobre sistemas de elevadores para proyectos de nueva construcción o renovación.",
+          title: "Consultoría de Elevadores",
+          description: "Orientación profesional para sistemas de elevadores en proyectos de nueva construcción o renovación.",
           icon: "ri-question-answer-line",
-          features: ["Asistencia en diseño", "Análisis de tráfico", "Estimación de costos", "Planificación de proyectos"]
+          features: ["Recomendaciones de sistemas", "Planificación de presupuesto", "Especificaciones técnicas", "Supervisión de proyectos"]
+        },
+        {
+          title: "Instalación de Sistema de Monitoreo de Cerraduras de Puertas",
+          description: "Sistemas avanzados de monitoreo de cerraduras de puertas para mejorar la seguridad de los elevadores.",
+          icon: "ri-door-lock-box-line",
+          features: ["Sistemas conformes con los códigos", "Monitoreo en tiempo real", "Alertas de mal funcionamiento", "Mayor seguridad para pasajeros"]
+        },
+        {
+          title: "Instalación de Bordes de Proximidad 3D",
+          description: "Tecnología de vanguardia de bordes de proximidad 3D para mejorar la seguridad y operación de las puertas.",
+          icon: "ri-sensor-line",
+          features: ["Detección avanzada de obstáculos", "Reducción de incidentes con puertas", "Integración perfecta", "Mayor vida útil del equipo"]
+        },
+        {
+          title: "Trabajo Eléctrico para Modernizaciones de Elevadores",
+          description: "Servicios eléctricos integrales específicamente para modernizaciones de sistemas de elevadores.",
+          icon: "ri-plug-line",
+          features: ["Actualizaciones de cableado", "Actualizaciones de sistemas de control", "Modificaciones de suministro eléctrico", "Instalaciones conformes con códigos"]
+        },
+        {
+          title: "Actualización de Desconexión Eléctrica Principal en Sala de Máquinas",
+          description: "Actualizaciones profesionales para desconexiones eléctricas de salas de máquinas para mejorar la seguridad y confiabilidad.",
+          icon: "ri-switch-line",
+          features: ["Características de seguridad modernas", "Cumplimiento de códigos", "Mejor acceso para mantenimiento", "Protección mejorada del sistema"]
+        },
+        {
+          title: "Reemplazo de Equipos de Puertas",
+          description: "Servicios completos de reemplazo para equipos de puertas de elevadores desgastados u obsoletos.",
+          icon: "ri-door-open-line",
+          features: ["Componentes de alta calidad", "Operación mejorada de puertas", "Niveles de ruido reducidos", "Confiabilidad mejorada"]
+        },
+        {
+          title: "Instalación de Bordes de Seguridad (Proximidad)",
+          description: "Instalación de bordes de seguridad de proximidad para prevenir accidentes de cierre de puertas y mejorar la operación.",
+          icon: "ri-safe-line",
+          features: ["Tecnología avanzada de sensores", "Detección sin contacto", "Fácil mantenimiento", "Vida útil extendida"]
+        },
+        {
+          title: "Actualización de Operadores de Puertas GAL",
+          description: "Actualizaciones especializadas para operadores de puertas GAL para mejorar el rendimiento y la confiabilidad.",
+          icon: "ri-settings-line",
+          features: ["Última tecnología GAL", "Temporización de puertas mejorada", "Desgaste mecánico reducido", "Experiencia mejorada para pasajeros"]
+        },
+        {
+          title: "Instalación de Teléfono Celular",
+          description: "Instalación de sistemas de teléfono celular confiables en elevadores para comunicaciones de emergencia.",
+          icon: "ri-phone-line",
+          features: ["Sistemas conformes con códigos", "Comunicación clara", "Conectividad confiable", "Capacidad de monitoreo 24/7"]
         }
       ],
       cta: "Contáctenos hoy para una consulta gratuita",
@@ -111,40 +183,76 @@ const Services = () => {
       intro: "Nous proposons une gamme complète de services d'ascenseurs pour répondre à tous vos besoins :",
       services: [
         {
-          title: "Installation",
-          description: "Installation experte de nouveaux systèmes d'ascenseurs pour bâtiments résidentiels et commerciaux.",
-          icon: "ri-building-line",
-          features: ["Équipe professionnelle", "Équipement de qualité", "Achèvement dans les délais", "Conformité de sécurité"]
-        },
-        {
-          title: "Entretien",
-          description: "Entretien régulier pour assurer le fonctionnement fluide et sécurisé de vos systèmes d'ascenseurs.",
+          title: "Réparation d'Ascenseurs",
+          description: "Services de réparation rapides et fiables pour tous types de systèmes d'ascenseurs afin de minimiser les temps d'arrêt.",
           icon: "ri-tools-line",
-          features: ["Maintenance préventive", "Service d'urgence 24/7", "Inspections détaillées", "Optimisation des performances"]
+          features: ["Réponse d'urgence 24/7", "Diagnostic complet du système", "Pièces de rechange d'origine", "Service pour toutes marques d'ascenseurs"]
         },
         {
-          title: "Réparation",
-          description: "Services de réparation rapides et efficaces pour minimiser les temps d'arrêt et restaurer la fonctionnalité.",
-          icon: "ri-service-line",
-          features: ["Temps de réponse rapides", "Pièces d'origine", "Diagnostics experts", "Garantie sur les réparations"]
+          title: "Certification d'Ascenseurs",
+          description: "Services de certification professionnels pour garantir que vos ascenseurs respectent toutes les réglementations locales et nationales.",
+          icon: "ri-certified-line",
+          features: ["Inspections annuelles", "Préparation de documentation", "Vérification de conformité aux codes", "Certification de sécurité"]
         },
         {
-          title: "Modernisation",
-          description: "Mettez à jour vos systèmes d'ascenseurs existants avec les dernières technologies et fonctionnalités de sécurité.",
-          icon: "ri-refresh-line",
-          features: ["Efficacité énergétique", "Sécurité améliorée", "Performance améliorée", "Esthétique moderne"]
+          title: "Corrections de Violations",
+          description: "Solutions expertes pour traiter et résoudre rapidement et efficacement les violations de code d'ascenseur.",
+          icon: "ri-error-warning-line",
+          features: ["Évaluation complète des violations", "Développement de plan de correction", "Mise en œuvre rapide", "Conformité réglementaire"]
         },
         {
-          title: "Inspection",
-          description: "Inspections approfondies pour assurer la conformité à toutes les réglementations et normes de sécurité.",
-          icon: "ri-search-line",
-          features: ["Vérification de conformité", "Rapports détaillés", "Évaluation des risques", "Certification"]
-        },
-        {
-          title: "Consultation",
-          description: "Conseils d'experts sur les systèmes d'ascenseurs pour les projets de nouvelle construction ou de rénovation.",
+          title: "Consultation d'Ascenseurs",
+          description: "Conseil professionnel pour les systèmes d'ascenseurs dans les projets de construction nouvelle ou de rénovation.",
           icon: "ri-question-answer-line",
-          features: ["Assistance à la conception", "Analyse du trafic", "Estimation des coûts", "Planification de projet"]
+          features: ["Recommandations de systèmes", "Planification budgétaire", "Spécifications techniques", "Supervision de projet"]
+        },
+        {
+          title: "Installation de Système de Surveillance de Verrouillage de Porte",
+          description: "Systèmes avancés de surveillance de verrouillage de porte pour une sécurité et une sûreté accrues des ascenseurs.",
+          icon: "ri-door-lock-box-line",
+          features: ["Systèmes conformes aux codes", "Surveillance en temps réel", "Alertes de dysfonctionnement", "Sécurité accrue des passagers"]
+        },
+        {
+          title: "Installation de Bords de Proximité 3D",
+          description: "Technologie de pointe de bords de proximité 3D pour améliorer la sécurité et le fonctionnement des portes.",
+          icon: "ri-sensor-line",
+          features: ["Détection avancée d'obstacles", "Réduction des incidents de porte", "Intégration transparente", "Durée de vie prolongée de l'équipement"]
+        },
+        {
+          title: "Travaux Électriques Pour Modernisations d'Ascenseurs",
+          description: "Services électriques complets spécifiquement pour les modernisations de systèmes d'ascenseurs.",
+          icon: "ri-plug-line",
+          features: ["Mises à niveau de câblage", "Mises à jour de système de contrôle", "Modifications d'alimentation électrique", "Installations conformes aux codes"]
+        },
+        {
+          title: "Mise à Niveau de la Déconnexion Électrique Principale en Salle des Machines",
+          description: "Mises à niveau professionnelles pour les déconnexions électriques en salle des machines afin d'améliorer la sécurité et la fiabilité.",
+          icon: "ri-switch-line",
+          features: ["Caractéristiques de sécurité modernes", "Conformité aux codes", "Meilleur accès pour l'entretien", "Protection améliorée du système"]
+        },
+        {
+          title: "Remplacement d'Équipement de Porte",
+          description: "Services complets de remplacement pour les équipements de porte d'ascenseur usés ou obsolètes.",
+          icon: "ri-door-open-line",
+          features: ["Composants de haute qualité", "Fonctionnement amélioré des portes", "Niveaux de bruit réduits", "Fiabilité améliorée"]
+        },
+        {
+          title: "Installation de Bords de Sécurité (Proximité)",
+          description: "Installation de bords de sécurité à proximité pour prévenir les accidents de fermeture de porte et améliorer le fonctionnement.",
+          icon: "ri-safe-line",
+          features: ["Technologie avancée de capteurs", "Détection sans contact", "Entretien facile", "Durée de vie prolongée"]
+        },
+        {
+          title: "Mise à Niveau d'Opérateurs de Porte GAL",
+          description: "Mises à niveau spécialisées pour les opérateurs de porte GAL afin d'améliorer les performances et la fiabilité.",
+          icon: "ri-settings-line",
+          features: ["Dernière technologie GAL", "Synchronisation améliorée des portes", "Usure mécanique réduite", "Expérience passager améliorée"]
+        },
+        {
+          title: "Installation de Téléphone Cellulaire",
+          description: "Installation de systèmes de téléphone cellulaire fiables dans les ascenseurs pour les communications d'urgence.",
+          icon: "ri-phone-line",
+          features: ["Systèmes conformes aux codes", "Communication claire", "Connectivité fiable", "Capacité de surveillance 24/7"]
         }
       ],
       cta: "Contactez-nous aujourd'hui pour une consultation gratuite",
@@ -160,40 +268,76 @@ const Services = () => {
       intro: "Wir bieten umfassende Aufzugsdienstleistungen, um alle Ihre Bedürfnisse zu erfüllen:",
       services: [
         {
-          title: "Installation",
-          description: "Fachkundige Installation neuer Aufzugsanlagen für Wohn- und Geschäftsgebäude.",
-          icon: "ri-building-line",
-          features: ["Professionelles Team", "Qualitätsausrüstung", "Termingerechte Fertigstellung", "Sicherheitskonformität"]
-        },
-        {
-          title: "Wartung",
-          description: "Regelmäßige Wartung, um sicherzustellen, dass Ihre Aufzugsanlagen reibungslos und sicher laufen.",
+          title: "Aufzugsreparaturen",
+          description: "Schnelle und zuverlässige Reparaturdienste für alle Arten von Aufzugsanlagen zur Minimierung von Ausfallzeiten.",
           icon: "ri-tools-line",
-          features: ["Vorbeugende Wartung", "24/7 Notdienst", "Detaillierte Inspektionen", "Leistungsoptimierung"]
+          features: ["24/7 Notfalldienst", "Vollständige Systemdiagnose", "Original-Ersatzteile", "Service für alle Aufzugsmarken"]
         },
         {
-          title: "Reparatur",
-          description: "Schnelle und effiziente Reparaturdienste, um Ausfallzeiten zu minimieren und die Funktionalität wiederherzustellen.",
-          icon: "ri-service-line",
-          features: ["Schnelle Reaktionszeiten", "Originalteile", "Expertendiagnostik", "Garantie auf Reparaturen"]
+          title: "Aufzugszertifizierung",
+          description: "Professionelle Zertifizierungsdienste, um sicherzustellen, dass Ihre Aufzüge allen lokalen und staatlichen Vorschriften entsprechen.",
+          icon: "ri-certified-line",
+          features: ["Jährliche Inspektionen", "Dokumentationsvorbereitung", "Überprüfung der Einhaltung von Vorschriften", "Sicherheitszertifizierung"]
         },
         {
-          title: "Modernisierung",
-          description: "Aktualisieren Sie Ihre bestehenden Aufzugsanlagen mit neuester Technologie und Sicherheitsfunktionen.",
-          icon: "ri-refresh-line",
-          features: ["Energieeffizienz", "Verbesserte Sicherheit", "Verbesserte Leistung", "Moderne Ästhetik"]
+          title: "Behebung von Verstößen",
+          description: "Fachmännische Lösungen zur schnellen und effektiven Behebung von Aufzugscode-Verstößen.",
+          icon: "ri-error-warning-line",
+          features: ["Umfassende Bewertung von Verstößen", "Entwicklung von Korrekturplänen", "Schnelle Umsetzung", "Einhaltung von Vorschriften"]
         },
         {
-          title: "Inspektion",
-          description: "Gründliche Inspektionen, um die Einhaltung aller Sicherheitsvorschriften und -standards zu gewährleisten.",
-          icon: "ri-search-line",
-          features: ["Konformitätsprüfung", "Detaillierte Berichte", "Risikobewertung", "Zertifizierung"]
-        },
-        {
-          title: "Beratung",
-          description: "Fachkundige Beratung zu Aufzugsanlagen für Neubauten oder Renovierungsprojekte.",
+          title: "Aufzugsberatung",
+          description: "Professionelle Beratung für Aufzugsanlagen bei Neubauten oder Renovierungsprojekten.",
           icon: "ri-question-answer-line",
-          features: ["Designunterstützung", "Verkehrsanalyse", "Kostenschätzung", "Projektplanung"]
+          features: ["Systemempfehlungen", "Budgetplanung", "Technische Spezifikationen", "Projektüberwachung"]
+        },
+        {
+          title: "Installation von Türverriegelungsüberwachungssystemen",
+          description: "Fortschrittliche Türverriegelungsüberwachungssysteme für erhöhte Aufzugssicherheit.",
+          icon: "ri-door-lock-box-line",
+          features: ["Vorschriftskonforme Systeme", "Echtzeit-Überwachung", "Fehlfunktionsalarme", "Verbesserte Fahrgastsicherheit"]
+        },
+        {
+          title: "3D-Näherungskanten-Installation",
+          description: "Hochmoderne 3D-Näherungskantentechnologie für verbesserte Türsicherheit und -funktion.",
+          icon: "ri-sensor-line",
+          features: ["Fortschrittliche Hinderniserkennung", "Reduzierte Türvorfälle", "Nahtlose Integration", "Verlängerte Geräte-Lebensdauer"]
+        },
+        {
+          title: "Elektroarbeiten für Aufzugsmodernisierungen",
+          description: "Umfassende Elektrodienstleistungen speziell für Aufzugssystemmodernisierungen.",
+          icon: "ri-plug-line",
+          features: ["Verkabelungs-Upgrades", "Steuerungssystem-Updates", "Stromversorgungsänderungen", "Vorschriftskonforme Installationen"]
+        },
+        {
+          title: "Upgrade der elektrischen Hauptabschaltung im Maschinenraum",
+          description: "Professionelle Upgrades für elektrische Abschaltungen im Maschinenraum zur Verbesserung der Sicherheit und Zuverlässigkeit.",
+          icon: "ri-switch-line",
+          features: ["Moderne Sicherheitsfunktionen", "Vorschriftskonformität", "Verbesserter Wartungszugang", "Erhöhter Systemschutz"]
+        },
+        {
+          title: "Türausrüstungsersatz",
+          description: "Komplette Ersatzdienste für verschlissene oder veraltete Aufzugstürausrüstung.",
+          icon: "ri-door-open-line",
+          features: ["Hochwertige Komponenten", "Verbesserte Türfunktion", "Reduzierte Geräuschpegel", "Erhöhte Zuverlässigkeit"]
+        },
+        {
+          title: "Sicherheitskanten-Installation (Näherung)",
+          description: "Installation von Näherungssicherheitskanten zur Verhinderung von Türschließunfällen und zur Verbesserung des Betriebs.",
+          icon: "ri-safe-line",
+          features: ["Fortschrittliche Sensortechnologie", "Berührungslose Erkennung", "Einfache Wartung", "Verlängerte Lebensdauer"]
+        },
+        {
+          title: "GAL-Türantrieb-Upgrade",
+          description: "Spezialisierte Upgrades für GAL-Türantriebe zur Verbesserung der Leistung und Zuverlässigkeit.",
+          icon: "ri-settings-line",
+          features: ["Neueste GAL-Technologie", "Verbesserte Türzeiten", "Reduzierter mechanischer Verschleiß", "Verbesserte Fahrgasterfahrung"]
+        },
+        {
+          title: "Mobiltelefon-Installation",
+          description: "Installation zuverlässiger Mobiltelefonsysteme in Aufzügen für Notfallkommunikation.",
+          icon: "ri-phone-line",
+          features: ["Vorschriftskonforme Systeme", "Klare Kommunikation", "Zuverlässige Konnektivität", "24/7-Überwachungsfähigkeit"]
         }
       ],
       cta: "Kontaktieren Sie uns noch heute für eine kostenlose Beratung",
