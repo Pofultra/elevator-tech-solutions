@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../context/LanguageContext";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next"; // Asegúrate de importar esto
+import { useTranslation } from "react-i18next";
 import BrandCarousel from "../components/BrandCarousel";
 import backgroundImage from "/images/home_fondo.webp";
 import aboutImage from "/images/rectangle1.webp";
@@ -16,7 +16,7 @@ import projectimage6 from "/images/rectangle7.webp";
 
 const Home = () => {
   const { language } = useLanguage();
-  const { t } = useTranslation(); // Hook para traducciones
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
 
   // Handle scroll events for navbar transparency
@@ -45,29 +45,45 @@ const Home = () => {
         />
       </Helmet>
 
-      {/* Hero Section - Matches Figma design */}
-      <section
-        className="relative h-screen bg-cover bg-center"
-        id="home"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
+      {/* Hero Section - Fixed position and responsive sizing with contained background */}
+      <section className="relative h-screen w-full overflow-hidden" id="home">
+        <div
+          className="absolute inset-0 bg-cover bg-center max-w-[1800px] mx-auto"
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        ></div>
         <div className="absolute inset-0 bg-[#050f22] bg-opacity-20"></div>
-        <div className="absolute top-[246px] left-[24px] w-[373px] h-[198px] flex flex-col justify-between z-10">
-          <div>
-            <h1 className="text-white font-sf font-extrabold text-[34px] leading-[39px] tracking-[0px]">
+
+        {/* Hero content container with dots positioned next to title */}
+        <div className="absolute top-1/4 left-6 md:left-[24px] w-full max-w-[373px] h-auto flex flex-col justify-between z-10">
+          <div className="relative">
+            <h1 className="text-white font-sf font-extrabold text-[28px] md:text-[34px] leading-[39px] tracking-[0px]">
               {t("home.hero.title")}
             </h1>
             <p className="text-white font-sf mt-2">{t("home.hero.subtitle")}</p>
+
+            {/* Numbered dots positioned to the right of title */}
+            <div className="absolute -right-20 md:-right-24 lg:right-[-15rem] top-1/2 transform -translate-y-1/2 flex flex-col space-y-2 text-center">
+              <div className="w-6 h-6 rounded-full bg-[#457ad8] text-white border border-[#213b6a] flex items-center justify-center text-sm">
+                1
+              </div>
+              <div className="w-6 h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-sm">
+                2
+              </div>
+              <div className="w-6 h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-sm">
+                3
+              </div>
+            </div>
           </div>
+
           <Link
             to="/contact"
-            className="block bg-[#457ad8] text-white py-2 px-6 rounded-md shadow-md font-sf hover:scale-105 transition-transform mt-10"
+            className="block bg-[#457ad8] text-white py-2 px-4 w-fit rounded-md shadow-md font-sf hover:scale-105 transition-transform mt-10"
           >
             {t("home.hero.cta")}
           </Link>
         </div>
 
-        {/* Contact buttons */}
+        {/* Contact buttons - responsive positioning */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-6">
           <button className="bg-white p-3 rounded-full shadow-md">
             <i className="ri-whatsapp-line text-green-500 text-xl"></i>
@@ -75,13 +91,6 @@ const Home = () => {
           <button className="bg-white p-3 rounded-full shadow-md">
             <i className="ri-mail-line text-blue-500 text-xl"></i>
           </button>
-        </div>
-
-        {/* Pagination Dots */}
-        <div className="absolute right-6 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2">
-          <div className="w-3 h-3 rounded-full bg-[#457ad8] border border-[#213b6a]"></div>
-          <div className="w-3 h-3 rounded-full bg-[#dcdcdc] border border-[#b0b0b0]"></div>
-          <div className="w-3 h-3 rounded-full bg-[#dcdcdc] border border-[#b0b0b0]"></div>
         </div>
       </section>
 
@@ -114,13 +123,13 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Adjusted grid spacing and responsive design */}
       <section className="py-16 bg-gray-50" id="services">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-2">{t("services.title")}</h2>
           <div className="w-full h-0.5 bg-[#457ad8] mb-8"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {/* Service 1 */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:shadow-lg">
               <div className="relative h-48 bg-[#213b6a]">
@@ -128,7 +137,7 @@ const Home = () => {
                   <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#457ad8] mb-4">
                     <i className="ri-tools-fill text-white text-2xl"></i>
                   </div>
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-xl font-semibold text-white text-center px-4">
                     {t("home.services.item1")}
                   </h3>
                 </div>
@@ -142,7 +151,7 @@ const Home = () => {
                   <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#457ad8] mb-4">
                     <i className="ri-medal-line text-white text-2xl"></i>
                   </div>
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-xl font-semibold text-white text-center px-4">
                     {t("home.services.item2")}
                   </h3>
                 </div>
@@ -156,7 +165,7 @@ const Home = () => {
                   <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#457ad8] mb-4">
                     <i className="ri-3d-cube-sphere-line text-white text-2xl"></i>
                   </div>
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-xl font-semibold text-white text-center px-4">
                     {t("home.services.item3")}
                   </h3>
                 </div>
@@ -170,7 +179,7 @@ const Home = () => {
                   <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#457ad8] mb-4">
                     <i className="ri-shield-check-line text-white text-2xl"></i>
                   </div>
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-xl font-semibold text-white text-center px-4">
                     {t("home.services.item4")}
                   </h3>
                 </div>
@@ -181,7 +190,7 @@ const Home = () => {
           <div className="mt-8 text-center">
             <Link
               to="/services"
-              className="inline-block bg-[#457ad8] hover:bg-[#213b6a] text-white py-2 px-6 rounded-md shadow-md transition-all duration-300"
+              className="inline-block bg-[#457ad8] hover:bg-[#213b6a] text-white py-2 px-6 rounded-md shadow-md transition-all duration-300 w-auto"
             >
               {t("home.services.cta")}
             </Link>
@@ -196,7 +205,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section - Better spacing for small screens */}
       <section className="py-16 bg-gray-50" id="testimonials">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-2">
@@ -205,7 +214,7 @@ const Home = () => {
           <div className="w-full h-0.5 bg-[#457ad8] mb-8"></div>
 
           <div className="flex flex-col md:flex-row gap-6">
-            <div className="bg-[#213b6a] border border-white rounded-xl p-8 text-white flex-1">
+            <div className="bg-[#213b6a] border border-white rounded-xl p-6 md:p-8 text-white flex-1">
               <div className="mb-6">
                 <p className="text-lg leading-relaxed italic">
                   {t("home.testimonials.quote1")}
@@ -218,7 +227,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="bg-[#213b6a] border border-white rounded-xl p-8 text-white flex-1">
+            <div className="bg-[#213b6a] border border-white rounded-xl p-6 md:p-8 text-white flex-1">
               <div className="mb-6">
                 <p className="text-lg leading-relaxed italic">
                   {t("home.testimonials.quote2")}
@@ -234,7 +243,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Brands Section */}
+      {/* Brands Section - Responsive padding */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">
@@ -246,7 +255,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section - Improved responsive form */}
       <section className="py-16 bg-[#050f22] text-white relative" id="contact">
         <div className="absolute inset-0 bg-opacity-70"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -290,7 +299,7 @@ const Home = () => {
               </div>
 
               <div className="flex justify-center pt-6">
-                <button className="bg-[#457ad8] hover:bg-[#213b6a] text-white py-2 px-8 rounded-md shadow-md transition-all duration-300 transform hover:scale-105">
+                <button className="bg-[#457ad8] hover:bg-[#213b6a] text-white py-2 px-6 w-auto rounded-md shadow-md transition-all duration-300 transform hover:scale-105">
                   {t("home.contact.cta")}
                 </button>
               </div>
