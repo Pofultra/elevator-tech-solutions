@@ -53,36 +53,57 @@ const Home = () => {
         ></div>
         <div className="absolute inset-0 bg-[#050f22] bg-opacity-20"></div>
 
-        {/* Hero content container with dots positioned next to title */}
-        <div className="absolute top-1/4 left-6 md:left-[24px] w-full max-w-[373px] h-auto flex flex-col justify-between z-10">
-          <div className="relative">
-            <h1 className="text-white font-sf font-extrabold text-[28px] md:text-[34px] leading-[39px] tracking-[0px]">
-              {t("home.hero.title")}
-            </h1>
-            <p className="text-white font-sf mt-2">{t("home.hero.subtitle")}</p>
+        {/* Hero Section - Fixed position and responsive sizing with contained background */}
+        <section className="relative h-screen w-full overflow-hidden" id="home">
+          <div
+            className="absolute inset-0 bg-cover bg-center max-w-[1800px] mx-auto"
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+          ></div>
+          <div className="absolute inset-0 bg-[#050f22] bg-opacity-20"></div>
 
-            {/* Numbered dots positioned to the right of title */}
-            <div className="absolute -right-20 md:-right-24 lg:right-[-15rem] top-1/2 transform -translate-y-1/2 flex flex-col space-y-2 text-center">
-              <div className="w-6 h-6 rounded-full bg-[#457ad8] text-white border border-[#213b6a] flex items-center justify-center text-sm">
-                1
-              </div>
-              <div className="w-6 h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-sm">
-                2
-              </div>
-              <div className="w-6 h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-sm">
-                3
+          {/* Hero content container with dots positioned next to title */}
+          <div className="absolute top-1/4 left-6 md:left-[24px] w-full max-w-[373px] h-auto flex flex-col justify-between z-10">
+            <div className="relative">
+              <h1 className="text-white font-sf font-extrabold text-[28px] md:text-[34px] leading-[39px] tracking-[0px]">
+                {t("home.hero.title")}
+              </h1>
+              <p className="text-white font-sf mt-2">
+                {t("home.hero.subtitle")}
+              </p>
+
+              {/* Numbered dots positioned to the right of title */}
+              <div className="absolute -right-20 md:-right-24 lg:right-[-15rem] top-1/2 transform -translate-y-1/2 flex flex-col space-y-2 text-center">
+                <div className="w-6 h-6 rounded-full bg-[#457ad8] text-white border border-[#213b6a] flex items-center justify-center text-sm">
+                  1
+                </div>
+                <div className="w-6 h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-sm">
+                  2
+                </div>
+                <div className="w-6 h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-sm">
+                  3
+                </div>
               </div>
             </div>
+
+            <Link
+              to="/contact"
+              className="block bg-[#457ad8] text-white py-2 px-4 w-fit rounded-md shadow-md font-sf hover:scale-105 transition-transform mt-10"
+            >
+              {t("home.hero.cta")}
+            </Link>
           </div>
 
-          <Link
-            to="/contact"
-            className="block bg-[#457ad8] text-white py-2 px-4 w-fit rounded-md shadow-md font-sf hover:scale-105 transition-transform mt-10"
-          >
-            {t("home.hero.cta")}
-          </Link>
-        </div>
-
+          {/* Contact buttons - responsive positioning */}
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-6">
+            <button className="bg-white p-3 rounded-full shadow-md">
+              <i className="ri-whatsapp-line text-green-500 text-xl"></i>
+            </button>
+            <button className="bg-white p-3 rounded-full shadow-md">
+              <i className="ri-mail-line text-blue-500 text-xl"></i>
+            </button>
+          </div>
+        </section>
+        
         {/* Contact buttons - responsive positioning */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-6">
           <button className="bg-white p-3 rounded-full shadow-md">

@@ -8,16 +8,15 @@ const Navbar = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isScrolledPastHome, setIsScrolledPastHome] = useState(false); // Estado para detectar si se ha pasado la sección home
+  const [isScrolledPastHome, setIsScrolledPastHome] = useState(false);
   const { t } = useTranslation();
 
-  // Detectar scroll y verificar si se ha pasado la sección home
   useEffect(() => {
     const handleScroll = () => {
       if (isHome) {
         const homeSection = document.getElementById("home");
         if (homeSection) {
-          const homeSectionHeight = homeSection.offsetHeight; // Altura de la sección home
+          const homeSectionHeight = homeSection.offsetHeight;
           setIsScrolledPastHome(window.scrollY > homeSectionHeight);
         }
       }
@@ -29,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full p-4 flex justify-between items-center z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full py-2 px-4 flex justify-between items-center z-50 transition-all duration-300 ${
         isHome && !isScrolledPastHome ? "bg-transparent" : "bg-gray-800 text-white shadow-md"
       }`}
     >
@@ -37,7 +36,7 @@ const Navbar = () => {
       <Link to="/">
         <div
           className={`flex items-center justify-center rounded-full transition-all duration-300 ${
-            isHome && !isScrolledPastHome ? "bg-black p-2" : "bg-gray-800 p-2"
+            isHome && !isScrolledPastHome ? "bg-black p-1" : "bg-gray-800 p-1"
           }`}
         >
           <img
@@ -49,11 +48,12 @@ const Navbar = () => {
       </Link>
 
       {/* Botón de menú y selector de idioma */}
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-3">
         <LanguageSelector />
         <button
-          className={`text-2xl transition-all duration-300 text-white`}
+          className="text-xl transition-all duration-300 text-white"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
           <i className={menuOpen ? "ri-close-line" : "ri-menu-line"}></i>
         </button>
@@ -61,12 +61,12 @@ const Navbar = () => {
 
       {/* Menú desplegable */}
       {menuOpen && (
-        <div className="absolute top-full right-0 bg-gray-800 text-white p-4 w-48 rounded-md shadow-lg">
-          <ul className="space-y-2">
+        <div className="absolute top-full right-0 bg-gray-800 text-white p-3 w-44 rounded-md shadow-lg mt-1">
+          <ul className="space-y-1">
             <li>
               <Link
                 to="/"
-                className="block hover:text-yellow-500 transition"
+                className="block py-1 hover:text-yellow-500 transition"
                 onClick={() => setMenuOpen(false)}
               >
                 {t("navbar.home")}
@@ -75,7 +75,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/about"
-                className="block hover:text-yellow-500 transition"
+                className="block py-1 hover:text-yellow-500 transition"
                 onClick={() => setMenuOpen(false)}
               >
                 {t("navbar.about")}
@@ -84,17 +84,16 @@ const Navbar = () => {
             <li>
               <Link
                 to="/services"
-                className="block hover:text-yellow-500 transition"
+                className="block py-1 hover:text-yellow-500 transition"
                 onClick={() => setMenuOpen(false)}
               >
                 {t("navbar.services")}
               </Link>
             </li>
-            
             <li>
               <Link
                 to="/brands"
-                className="block hover:text-yellow-500 transition"
+                className="block py-1 hover:text-yellow-500 transition"
                 onClick={() => setMenuOpen(false)}
               >
                 {t("navbar.brands")}
@@ -103,7 +102,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/testimonials"
-                className="block hover:text-yellow-500 transition"
+                className="block py-1 hover:text-yellow-500 transition"
                 onClick={() => setMenuOpen(false)}
               >
                 {t("navbar.testimonials")}
@@ -112,7 +111,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/contact"
-                className="block hover:text-yellow-500 transition"
+                className="block py-1 hover:text-yellow-500 transition"
                 onClick={() => setMenuOpen(false)}
               >
                 {t("navbar.contact")}
