@@ -18,7 +18,6 @@ i18n
       es: {
         translation: translationsES
       }
-      
     },
     fallbackLng: 'en', // Idioma por defecto
     debug: process.env.NODE_ENV === 'development',

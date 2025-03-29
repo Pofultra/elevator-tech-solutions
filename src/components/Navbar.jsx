@@ -27,10 +27,7 @@ const Navbar = () => {
   }, [isHome]);
 
   return (
-    <nav
-      className='fixed top-0 left-0 w-full py-2 px-4 flex justify-between items-center z-50 transition-all duration-300 bg-gray-800 text-white shadow-md'
-      
-    >
+    <nav className="fixed top-0 left-0 w-full py-2 px-4 flex justify-between items-center z-50 transition-all duration-300 bg-gray-800 text-white shadow-md">
       {/* Logo */}
       <Link to="/">
         <div
@@ -38,11 +35,7 @@ const Navbar = () => {
             isHome && !isScrolledPastHome ? "bg-black p-1" : "bg-gray-800 p-1"
           }`}
         >
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-8 w-8 object-cover"
-          />
+          <img src={logo} alt="Logo" className="h-8 w-8 object-cover" />
         </div>
       </Link>
 
@@ -87,15 +80,6 @@ const Navbar = () => {
                 onClick={() => setMenuOpen(false)}
               >
                 {t("navbar.services")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/brands"
-                className="block py-1 hover:text-yellow-500 transition"
-                onClick={() => setMenuOpen(false)}
-              >
-                {t("navbar.brands")}
               </Link>
             </li>
             <li>

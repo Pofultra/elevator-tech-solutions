@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
 import { HelmetProvider } from "react-helmet-async";
 
+// Importamos el componente ScrollToTop
+import ScrollToTop from "./components/ScrollToTop";
+
 // Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -25,6 +28,8 @@ function App() {
     <HelmetProvider>
       <LanguageProvider>
         <Router basename="/elevator-tech-solutions">
+          {/* Añadimos el componente ScrollToTop aquí */}
+          <ScrollToTop />
           <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
             <Navbar />
             <main className="flex-grow">
