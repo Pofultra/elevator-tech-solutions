@@ -71,7 +71,7 @@ const Home = () => {
         <div className="absolute inset-0 m-4 sm:m-6 md:m-8 lg:m-10 overflow-hidden rounded-lg">
           {/* Background Image with proper loading optimization */}
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat h-full w-full transform scale-105"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat h-full w-full transform scale-105 "
             style={{ backgroundImage: `url(${backgroundImage})` }}
             role="img"
             aria-label="Elevator Tech Solutions background"
@@ -80,7 +80,7 @@ const Home = () => {
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 sm:px-8 md:px-10">
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 sm:px-8 md:px-10 lg:left-16">
           <div className="max-w-xs sm:max-w-sm md:max-w-md">
             <h1 className="text-white font-sf font-extrabold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight">
               {t("home.hero.title")}
@@ -99,7 +99,7 @@ const Home = () => {
         </div>
 
         {/* Numbered dots - visible on all screen sizes */}
-        <div className="flex absolute right-8  md:right-12 lg:right-16 top-1/2 transform -translate-y-1/2 flex-col space-y-2 text-center z-10">
+        <div className="flex absolute right-8  md:right-12 lg:right-40 top-1/2 transform -translate-y-1/2 flex-col space-y-2 text-center z-10">
           <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-[#457ad8] text-white border border-[#213b6a] flex items-center justify-center text-[10px] sm:text-xs md:text-sm">
             1
           </div>
@@ -112,7 +112,7 @@ const Home = () => {
         </div>
 
         {/* Contact buttons */}
-        <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 z-10">
+        <div className="absolute bottom-6 sm:bottom-10 lg:bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 z-10">
           <a
             href="https://wa.me/6452409570"
             target="_blank"
