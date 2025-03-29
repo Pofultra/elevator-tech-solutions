@@ -46,41 +46,27 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative h-screen w-full overflow-hidden" id="home">
-        {/* Background Image */}
+      <section 
+        className="relative h-screen text-white flex items-center justify-center border-b-4 border-[#457ad8] max-w-4xl mx-auto" 
+        id="home"
+      >
+        {/* Background */}
         <div
-          className="absolute inset-0 bg-cover bg-center max-w-[1800px] mx-auto"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         ></div>
         <div className="absolute inset-0 bg-[#050f22] bg-opacity-20"></div>
 
-        {/* Hero content container */}
-        <div className="absolute inset-0 flex flex-col justify-center px-6 sm:px-8 md:px-12 z-10">
-          <div className="max-w-md relative">
-            {/* Title and Subtitle */}
-            <div className="mb-8">
-              <h1 className="text-white font-sf font-extrabold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight">
-                {t("home.hero.title")}
-              </h1>
-              <p className="text-white font-sf text-sm sm:text-base mt-2">
-                {t("home.hero.subtitle")}
-              </p>
-            </div>
-
-            {/* Numbered dots (hidden on smallest screens, visible from sm up) */}
-            <div className="hidden sm:flex absolute -right-12 md:-right-16 lg:-right-20 top-1/2 transform -translate-y-1/2 flex-col space-y-2 text-center">
-              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#457ad8] text-white border border-[#213b6a] flex items-center justify-center text-xs sm:text-sm">
-                1
-              </div>
-              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-xs sm:text-sm">
-                2
-              </div>
-              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-xs sm:text-sm">
-                3
-              </div>
-            </div>
-
-            {/* CTA Button */}
+        {/* Content Container */}
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-6">
+          <div className="max-w-md">
+            <h1 className="text-white font-sf font-extrabold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight">
+              {t("home.hero.title")}
+            </h1>
+            <p className="text-white font-sf text-sm sm:text-base mt-2 mb-8">
+              {t("home.hero.subtitle")}
+            </p>
+            
             <Link
               to="/contact"
               className="inline-block bg-[#457ad8] text-white py-2 px-4 rounded-md shadow-md font-sf hover:scale-105 transition-transform text-sm sm:text-base"
@@ -90,7 +76,20 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Contact buttons - responsive positioning */}
+        {/* Numbered dots */}
+        <div className="hidden sm:flex absolute right-4 md:right-8 lg:right-12 top-1/2 transform -translate-y-1/2 flex-col space-y-2 text-center z-10">
+          <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#457ad8] text-white border border-[#213b6a] flex items-center justify-center text-xs sm:text-sm">
+            1
+          </div>
+          <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-xs sm:text-sm">
+            2
+          </div>
+          <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-xs sm:text-sm">
+            3
+          </div>
+        </div>
+
+        {/* Contact buttons */}
         <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 z-10">
           <button className="bg-white p-2 sm:p-3 rounded-full shadow-md hover:bg-gray-100 transition-colors">
             <i className="ri-whatsapp-line text-green-500 text-lg sm:text-xl"></i>
@@ -102,8 +101,8 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-16 bg-white" id="about">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-white border-b border-gray-200" id="about">
+        <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-2">{t("about.title")}</h2>
           <div className="w-full h-0.5 bg-[#457ad8] mb-8"></div>
           <div className="flex flex-col md:flex-row gap-8">
@@ -130,9 +129,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Section - Adjusted grid spacing and responsive design */}
-      <section className="py-16 bg-gray-50" id="services">
-        <div className="container mx-auto px-4">
+      {/* Services Section */}
+      <section className="py-16 bg-gray-50 border-b border-gray-200" id="services">
+        <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-2">{t("services.title")}</h2>
           <div className="w-full h-0.5 bg-[#457ad8] mb-8"></div>
 
@@ -212,9 +211,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section - Better spacing for small screens */}
-      <section className="py-16 bg-gray-50" id="testimonials">
-        <div className="container mx-auto px-4">
+      {/* Testimonials Section */}
+      <section className="py-16 bg-gray-50 border-b border-gray-200" id="testimonials">
+        <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-2">
             {t("home.testimonials.title")}
           </h2>
@@ -250,9 +249,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Brands Section - Responsive padding */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
+      {/* Brands Section */}
+      <section className="py-12 bg-white border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8">
             {t("home.brands.title")}
           </h2>
@@ -262,10 +261,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Contact Section - Improved responsive form */}
+      {/* Contact Section */}
       <section className="py-16 bg-[#050f22] text-white relative" id="contact">
         <div className="absolute inset-0 bg-opacity-70"></div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
           <h2 className="text-3xl font-bold mb-8 text-center">
             {t("home.contact.title")}
           </h2>
