@@ -7,12 +7,7 @@ import BrandCarousel from "../components/BrandCarousel";
 import SEO from "../components/SEO"; // Import our SEO component
 import backgroundImage from "/images/home_fondo.webp";
 import aboutImage from "/images/rectangle1.webp";
-import projectimage1 from "/images/rectangle2.webp";
-import projectimage2 from "/images/rectangle3.webp";
-import projectimage3 from "/images/rectangle4.webp";
-import projectimage4 from "/images/rectangle5.webp";
-import projectimage5 from "/images/rectangle6.webp";
-import projectimage6 from "/images/rectangle7.webp";
+
 
 const Home = () => {
   const { language } = useLanguage();
@@ -61,7 +56,7 @@ const Home = () => {
   return (
     <>
       {/* SEO Component */}
-      <SEO 
+      <SEO
         titleKey="meta.home.title"
         descriptionKey="meta.home.description"
         extraKeywords="elevator emergency service, 24/7 elevator repair"

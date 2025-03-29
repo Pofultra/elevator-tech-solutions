@@ -92,25 +92,29 @@
       "subtitle": "What our clients say about us"
     },
     "contact": {
-      "title": "Contact Us",
-      "subtitle": "Get in touch with our team for a free consultation",
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone",
-      "message": "Message",
-      "submit": "Submit",
-      "address": "Address",
-      "phone_label": "Phone",
-      "email_label": "Email",
-      "location": "Miami, FL",
-      "success": "Your message has been sent successfully!",
-      "error": "There was an error sending your message. Please try again."
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team for a free consultation",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "submit": "Submit",
+    "address": "Address",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "location": "Miami, FL",
+    "success": "Your message has been sent successfully!",
+    "error": "There was an error sending your message. Please try again."
     },
     "footer": {
       "rights": "All rights reserved",
-      "company": "Elevator Tech Solutions"
-    },
-    
+      "company": "Elevator Tech Solutions",
+      "contact_info": {
+        "address": "123 Main Street, Miami, FL 33101",
+        "phone": "645-240-9570",
+        "email": "elevatorts@gmail.com"
+      }
+    },    
     "meta": {
       "defaultTitle": "Elevator Tech Solutions | Professional Elevator Services in South Florida",
       "defaultDescription": "Certified elevator contractor specializing in installation, maintenance, and repair of commercial and residential elevators throughout South Florida.",

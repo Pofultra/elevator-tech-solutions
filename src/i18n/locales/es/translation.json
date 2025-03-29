@@ -92,25 +92,29 @@
       "subtitle": "Lo que nuestros clientes dicen sobre nosotros"
     },
     "contact": {
-      "title": "Contáctenos",
-      "subtitle": "Póngase en contacto con nuestro equipo para una consulta gratuita",
-      "name": "Nombre",
-      "email": "Correo electrónico",
-      "phone": "Teléfono",
-      "message": "Mensaje",
-      "submit": "Enviar",
-      "address": "Dirección",
-      "phone_label": "Teléfono",
-      "email_label": "Correo electrónico",
-      "location": "Miami, FL",
-      "success": "¡Su mensaje ha sido enviado con éxito!",
-      "error": "Hubo un error al enviar su mensaje. Por favor, inténtelo de nuevo."
+    "title": "Contáctenos",
+    "subtitle": "Póngase en contacto con nuestro equipo para una consulta gratuita",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "message": "Mensaje",
+    "submit": "Enviar",
+    "address": "Dirección",
+    "phone_label": "Teléfono",
+    "email_label": "Correo electrónico",
+    "location": "Miami, FL",
+    "success": "¡Su mensaje ha sido enviado con éxito!",
+    "error": "Hubo un error al enviar su mensaje. Por favor, inténtelo de nuevo."
     },
     "footer": {
       "rights": "Todos los derechos reservados",
-      "company": "Soluciones Técnicas de Elevadores"
-    },
-    
+      "company": "Soluciones Técnicas de Elevadores",
+      "contact_info": {
+        "address": "123 Main Street, Miami, FL 33101",
+        "phone": "645-240-9570",
+        "email": "elevatorts@gmail.com"
+      }
+    },    
     "meta": {
       "defaultTitle": "Soluciones Tech para Elevadores | Servicios Profesionales de Elevadores en el Sur de Florida",
       "defaultDescription": "Contratista certificado de elevadores especializado en instalación, mantenimiento y reparación de elevadores comerciales y residenciales en todo el sur de Florida.",
