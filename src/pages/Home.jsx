@@ -93,7 +93,7 @@ const Home = () => {
         </div>
 
         {/* Contact buttons */}
-        <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 z-10">
+        <div className="absolute bottom-14 sm:bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 z-10">
           <button className="bg-white p-2 sm:p-3 rounded-full shadow-md hover:bg-gray-100 transition-colors">
             <i className="ri-whatsapp-line text-green-500 text-lg sm:text-xl"></i>
           </button>
