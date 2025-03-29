@@ -46,27 +46,30 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section 
-        className="relative h-screen text-white flex items-center justify-center border-b-4 border-[#457ad8] max-w-4xl mx-auto" 
+      <section
+        className="relative h-screen flex items-center justify-center border-b-4 border-[#457ad8] max-w-4xl mx-auto overflow-hidden"
         id="home"
       >
-        {/* Background */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${backgroundImage})` }}
-        ></div>
-        <div className="absolute inset-0 bg-[#050f22] bg-opacity-20"></div>
+        {/* Background container with padding */}
+        <div className="absolute inset-0 m-4 sm:m-6 md:m-8 lg:m-10 overflow-hidden rounded-lg">
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat h-full w-full transform scale-105"
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+          ></div>
+          <div className="absolute inset-0 bg-[#050f22] bg-opacity-20"></div>
+        </div>
 
         {/* Content Container */}
-        <div className="relative z-10 w-full max-w-4xl mx-auto px-6">
-          <div className="max-w-md">
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 sm:px-8 md:px-10">
+          <div className="max-w-xs sm:max-w-sm md:max-w-md">
             <h1 className="text-white font-sf font-extrabold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight">
               {t("home.hero.title")}
             </h1>
             <p className="text-white font-sf text-sm sm:text-base mt-2 mb-8">
               {t("home.hero.subtitle")}
             </p>
-            
+
             <Link
               to="/contact"
               className="inline-block bg-[#457ad8] text-white py-2 px-4 rounded-md shadow-md font-sf hover:scale-105 transition-transform text-sm sm:text-base"
@@ -76,15 +79,15 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Numbered dots */}
-        <div className="hidden sm:flex absolute right-4 md:right-8 lg:right-12 top-1/2 transform -translate-y-1/2 flex-col space-y-2 text-center z-10">
-          <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#457ad8] text-white border border-[#213b6a] flex items-center justify-center text-xs sm:text-sm">
+        {/* Numbered dots - visible on all screen sizes */}
+        <div className="flex absolute right-8  md:right-12 lg:right-16 top-1/2 transform -translate-y-1/2 flex-col space-y-2 text-center z-10">
+          <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-[#457ad8] text-white border border-[#213b6a] flex items-center justify-center text-[10px] sm:text-xs md:text-sm">
             1
           </div>
-          <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-xs sm:text-sm">
+          <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-[10px] sm:text-xs md:text-sm">
             2
           </div>
-          <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-xs sm:text-sm">
+          <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-[#dcdcdc] border border-[#b0b0b0] flex items-center justify-center text-[10px] sm:text-xs md:text-sm">
             3
           </div>
         </div>
@@ -130,7 +133,10 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-gray-50 border-b border-gray-200" id="services">
+      <section
+        className="py-16 bg-gray-50 border-b border-gray-200"
+        id="services"
+      >
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-2">{t("services.title")}</h2>
           <div className="w-full h-0.5 bg-[#457ad8] mb-8"></div>
@@ -212,7 +218,10 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-gray-50 border-b border-gray-200" id="testimonials">
+      <section
+        className="py-16 bg-gray-50 border-b border-gray-200"
+        id="testimonials"
+      >
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-2">
             {t("home.testimonials.title")}

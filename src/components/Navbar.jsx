@@ -28,9 +28,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full py-2 px-4 flex justify-between items-center z-50 transition-all duration-300 ${
-        isHome && !isScrolledPastHome ? "bg-transparent" : "bg-gray-800 text-white shadow-md"
-      }`}
+      className='fixed top-0 left-0 w-full py-2 px-4 flex justify-between items-center z-50 transition-all duration-300 bg-gray-800 text-white shadow-md'
+      
     >
       {/* Logo */}
       <Link to="/">
