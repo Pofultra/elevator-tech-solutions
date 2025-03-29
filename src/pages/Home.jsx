@@ -99,7 +99,7 @@ const Home = () => {
         </div>
 
         {/* Numbered dots - visible on all screen sizes */}
-        <div className="flex absolute right-8  md:right-12 lg:right-40 top-1/2 transform -translate-y-1/2 flex-col space-y-2 text-center z-10">
+        <div className="flex absolute right-8  md:right-12 lg:left-80 top-1/2 transform -translate-y-1/2 flex-col space-y-2 text-center z-10">
           <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-[#457ad8] text-white border border-[#213b6a] flex items-center justify-center text-[10px] sm:text-xs md:text-sm">
             1
           </div>
