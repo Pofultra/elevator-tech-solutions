@@ -109,5 +109,39 @@
     "footer": {
       "rights": "All rights reserved",
       "company": "Elevator Tech Solutions"
+    },
+    
+    "meta": {
+      "defaultTitle": "Elevator Tech Solutions | Professional Elevator Services in South Florida",
+      "defaultDescription": "Certified elevator contractor specializing in installation, maintenance, and repair of commercial and residential elevators throughout South Florida.",
+      "home": {
+        "title": "Elevator Tech Solutions | Professional Elevator Services in South Florida",
+        "description": "Certified elevator contractor specializing in installation, maintenance, and repair of commercial and residential elevators throughout South Florida."
+      },
+      "about": {
+        "title": "About Us | Elevator Tech Solutions",
+        "description": "Learn about Elevator Tech Solutions, our history, mission, and values as South Florida's premier elevator service provider."
+      },
+      "services": {
+        "title": "Our Services | Elevator Tech Solutions",
+        "description": "Comprehensive elevator services including installation, maintenance, repair, modernization, and more - serving South Florida."
+      },
+      "projects": {
+        "title": "Our Projects | Elevator Tech Solutions",
+        "description": "Explore our portfolio of elevator installation, modernization, and repair projects throughout South Florida."
+      },
+      "brands": {
+        "title": "Partner Brands | Elevator Tech Solutions",
+        "description": "Learn about the leading elevator manufacturers we partner with to deliver high-quality elevator solutions throughout South Florida."
+      },
+      "testimonials": {
+        "title": "Testimonials | Elevator Tech Solutions",
+        "description": "Read what our satisfied clients have to say about our elevator installation, maintenance, and repair services in South Florida."
+      },
+      "contact": {
+        "title": "Contact Us | Elevator Tech Solutions",
+        "description": "Get in touch with Elevator Tech Solutions for all your elevator installation, maintenance, and repair needs in South Florida."
+      }
     }
+    
   }

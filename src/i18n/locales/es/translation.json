@@ -109,5 +109,39 @@
     "footer": {
       "rights": "Todos los derechos reservados",
       "company": "Soluciones Técnicas de Elevadores"
+    },
+    
+    "meta": {
+      "defaultTitle": "Soluciones Tech para Elevadores | Servicios Profesionales de Elevadores en el Sur de Florida",
+      "defaultDescription": "Contratista certificado de elevadores especializado en instalación, mantenimiento y reparación de elevadores comerciales y residenciales en todo el sur de Florida.",
+      "home": {
+        "title": "Soluciones Tech para Elevadores | Servicios Profesionales de Elevadores en el Sur de Florida",
+        "description": "Contratista certificado de elevadores especializado en instalación, mantenimiento y reparación de elevadores comerciales y residenciales en todo el sur de Florida."
+      },
+      "about": {
+        "title": "Sobre Nosotros | Soluciones Tech para Elevadores",
+        "description": "Conozca más sobre Soluciones Tech para Elevadores, nuestra historia, misión y valores como el principal proveedor de servicios para elevadores en el sur de Florida."
+      },
+      "services": {
+        "title": "Nuestros Servicios | Soluciones Tech para Elevadores",
+        "description": "Servicios completos de elevadores, incluyendo instalación, mantenimiento, reparación, modernización y más - sirviendo al sur de Florida."
+      },
+      "projects": {
+        "title": "Nuestros Proyectos | Soluciones Tech para Elevadores",
+        "description": "Explore nuestra cartera de proyectos de instalación, modernización y reparación de elevadores en todo el sur de Florida."
+      },
+      "brands": {
+        "title": "Marcas Asociadas | Soluciones Tech para Elevadores",
+        "description": "Conozca los principales fabricantes de elevadores con los que nos asociamos para ofrecer soluciones de elevadores de alta calidad en todo el sur de Florida."
+      },
+      "testimonials": {
+        "title": "Testimonios | Soluciones Tech para Elevadores",
+        "description": "Lea lo que nuestros clientes satisfechos tienen que decir sobre nuestros servicios de instalación, mantenimiento y reparación de elevadores en el sur de Florida."
+      },
+      "contact": {
+        "title": "Contáctenos | Soluciones Tech para Elevadores",
+        "description": "Póngase en contacto con Soluciones Tech para Elevadores para todas sus necesidades de instalación, mantenimiento y reparación de elevadores en el sur de Florida."
+      }
     }
+    
   }

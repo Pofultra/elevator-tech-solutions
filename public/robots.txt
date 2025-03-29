@@ -1,0 +1,14 @@
+# robots.txt for elevatortechsolutions.com
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://elevatortechsolutions.com/sitemap.xml
+
+# Crawl-delay for all bots
+Crawl-delay: 10
+
+# Disallow admin, private or payment areas if needed
+Disallow: /admin/
+Disallow: /private/
+Disallow: /checkout/

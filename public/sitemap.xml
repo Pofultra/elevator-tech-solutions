@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Página de inicio (Home) -->
+  <url>
+    <loc>https://elevatortechsolutions.com/</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elevatortechsolutions.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elevatortechsolutions.com/?lng=es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatortechsolutions.com/?lng=fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://elevatortechsolutions.com/?lng=de"/>
+  </url>
+  
+  <!-- Página About -->
+  <url>
+    <loc>https://elevatortechsolutions.com/about</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elevatortechsolutions.com/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elevatortechsolutions.com/about?lng=es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatortechsolutions.com/about?lng=fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://elevatortechsolutions.com/about?lng=de"/>
+  </url>
+  
+  <!-- Página Services -->
+  <url>
+    <loc>https://elevatortechsolutions.com/services</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elevatortechsolutions.com/services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elevatortechsolutions.com/services?lng=es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatortechsolutions.com/services?lng=fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://elevatortechsolutions.com/services?lng=de"/>
+  </url>
+  
+  <!-- Página Projects -->
+  <url>
+    <loc>https://elevatortechsolutions.com/projects</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elevatortechsolutions.com/projects"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elevatortechsolutions.com/projects?lng=es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatortechsolutions.com/projects?lng=fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://elevatortechsolutions.com/projects?lng=de"/>
+  </url>
+  
+  <!-- Página Brands -->
+  <url>
+    <loc>https://elevatortechsolutions.com/brands</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elevatortechsolutions.com/brands"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elevatortechsolutions.com/brands?lng=es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatortechsolutions.com/brands?lng=fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://elevatortechsolutions.com/brands?lng=de"/>
+  </url>
+  
+  <!-- Página Testimonials -->
+  <url>
+    <loc>https://elevatortechsolutions.com/testimonials</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elevatortechsolutions.com/testimonials"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elevatortechsolutions.com/testimonials?lng=es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatortechsolutions.com/testimonials?lng=fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://elevatortechsolutions.com/testimonials?lng=de"/>
+  </url>
+  
+  <!-- Página Contact -->
+  <url>
+    <loc>https://elevatortechsolutions.com/contact</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elevatortechsolutions.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elevatortechsolutions.com/contact?lng=es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatortechsolutions.com/contact?lng=fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://elevatortechsolutions.com/contact?lng=de"/>
+  </url>
+</urlset>
