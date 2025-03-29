@@ -112,7 +112,7 @@ const Home = () => {
         </div>
 
         {/* Contact buttons */}
-        <div className="absolute bottom-6 sm:bottom-10 lg:bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 z-10">
+        <div className="absolute bottom-6 bottom-16  left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 z-10">
           <a
             href="https://wa.me/6452409570"
             target="_blank"
