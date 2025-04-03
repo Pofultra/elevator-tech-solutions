@@ -78,74 +78,74 @@ const Home = () => {
           <div className="absolute inset-0 bg-[#050f22] bg-opacity-20"></div>
         </div>
 
-        {/* Content Container - Main text */}
-        <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col items-start">
-          <div className="max-w-xs sm:max-w-sm md:max-w-md ml-5 sm:ml-8 md:ml-10">
-            <h1 className="text-white font-sf font-extrabold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight">
-              {t("home.hero.title")}
-            </h1>
-            <p className="text-white font-sf text-sm sm:text-base mt-2 mb-6 md:mb-8">
-              {t("home.hero.subtitle")}
-            </p>
+        {/* Content container using grid for better layout control */}
+        <div className="relative z-10 w-full h-full px-4 sm:px-6 md:px-8 py-10">
+          <div className="h-full grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {/* Left column: Title and CTA */}
+            <div className="flex flex-col justify-center items-start pl-3 sm:pl-6 md:pl-8">
+              <h1 className="text-white font-sf font-extrabold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight">
+                {t("home.hero.title")}
+              </h1>
+              <p className="text-white font-sf text-sm sm:text-base mt-2 mb-6 md:mb-8">
+                {t("home.hero.subtitle")}
+              </p>
+              <Link
+                to="/contact"
+                className="inline-block bg-[#457ad8] text-white py-2 px-4 sm:py-3 sm:px-6 rounded-md shadow-md font-sf hover:bg-[#3968c0] transition-colors text-sm sm:text-base"
+              >
+                {t("home.hero.cta")}
+              </Link>
+            </div>
 
-            <Link
-              to="/contact"
-              className="inline-block bg-[#457ad8] text-white py-2 px-4 sm:py-3 sm:px-6 rounded-md shadow-md font-sf hover:bg-[#3968c0] transition-colors text-sm sm:text-base"
-            >
-              {t("home.hero.cta")}
-            </Link>
+            {/* Right column: News card */}
+            <div className="flex flex-col justify-center items-center sm:items-end pr-0 sm:pr-6 md:pr-8">
+              {/* News Bubble */}
+              <div className="w-64 sm:w-56 md:w-64 bg-white bg-opacity-95 rounded-lg shadow-xl transform rotate-2">
+                <div className="relative p-4">
+                  <div className="absolute top-0 right-0 w-10 h-10 sm:w-12 sm:h-12 bg-[#457ad8] rounded-bl-full rounded-tr-lg -m-1"></div>
+                  <h3 className="text-[#213b6a] font-bold text-lg mb-2">
+                    {t("home.hero.newsTitle")}
+                  </h3>
+                  <p className="text-gray-700 text-sm mb-3">
+                    {t("home.hero.newsContent")}
+                  </p>
+                  <a
+                    href="https://www.instagram.com/p/DHbqKUAOM79/?igsh=MXd1eHU3aDY1Yndyeg=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-[#457ad8] text-sm font-medium hover:underline group"
+                  >
+                    {t("home.hero.newsLink")}
+                    <i className="ri-instagram-line ml-1 group-hover:ml-2 transition-all"></i>
+                  </a>
+                  <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#457ad8] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-[#457ad8]"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* News Bubble - Optimized positioning */}
-        <div className="absolute right-8 sm:right-12 md:right-16 lg:right-20 top-1/4 sm:top-1/4 md:top-1/5 w-48 sm:w-56 md:w-64 bg-white bg-opacity-95 rounded-lg shadow-xl transform rotate-2 z-10">
-          <div className="relative p-4">
-            {/* Decorative element */}
-            <div className="absolute top-0 right-0 w-10 h-10 sm:w-12 sm:h-12 bg-[#457ad8] rounded-bl-full rounded-tr-lg -m-1"></div>
-
-            <h3 className="text-[#213b6a] font-bold text-lg mb-2">
-              {t("home.hero.newsTitle")}
-            </h3>
-            <p className="text-gray-700 text-sm mb-3">
-              {t("home.hero.newsContent")}
-            </p>
-
+          {/* Contact buttons - Fixed bottom position */}
+          <div className="absolute bottom-10 sm:bottom-12 md:bottom-14 left-1/2 transform -translate-x-1/2 flex space-x-3 sm:space-x-4">
             <a
-              href="https://www.instagram.com/p/DHbqKUAOM79/?igsh=MXd1eHU3aDY1Yndyeg=="
+              href="https://wa.me/6452409570"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-[#457ad8] text-sm font-medium hover:underline group"
+              aria-label="Contact us via WhatsApp"
+              className="bg-white p-2 sm:p-3 rounded-full shadow-md hover:bg-gray-100 transition-colors hover:scale-110 transform duration-300"
             >
-              {t("home.hero.newsLink")}
-              <i className="ri-instagram-line ml-1 group-hover:ml-2 transition-all"></i>
+              <i className="ri-whatsapp-line text-green-500 text-lg sm:text-xl"></i>
             </a>
-
-            {/* Pulse effect */}
-            <span className="absolute -top-1 -right-1 flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#457ad8] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#457ad8]"></span>
-            </span>
+            <a
+              href="mailto:elevatorts@gmail.com"
+              aria-label="Contact us via Email"
+              className="bg-white p-2 sm:p-3 rounded-full shadow-md hover:bg-gray-100 transition-colors hover:scale-110 transform duration-300"
+            >
+              <i className="ri-mail-line text-blue-500 text-lg sm:text-xl"></i>
+            </a>
           </div>
-        </div>
-
-        {/* Contact buttons - Fixed position */}
-        <div className="absolute bottom-10 sm:bottom-12 md:bottom-14 left-1/2 transform -translate-x-1/2 flex space-x-3 sm:space-x-4 z-10">
-          <a
-            href="https://wa.me/6452409570"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Contact us via WhatsApp"
-            className="bg-white p-2 sm:p-3 rounded-full shadow-md hover:bg-gray-100 transition-colors hover:scale-110 transform duration-300"
-          >
-            <i className="ri-whatsapp-line text-green-500 text-lg sm:text-xl"></i>
-          </a>
-          <a
-            href="mailto:elevatorts@gmail.com"
-            aria-label="Contact us via Email"
-            className="bg-white p-2 sm:p-3 rounded-full shadow-md hover:bg-gray-100 transition-colors hover:scale-110 transform duration-300"
-          >
-            <i className="ri-mail-line text-blue-500 text-lg sm:text-xl"></i>
-          </a>
         </div>
       </section>
       {/* Rest of the Home page components remain the same */}
