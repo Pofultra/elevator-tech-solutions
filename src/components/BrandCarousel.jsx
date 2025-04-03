@@ -43,12 +43,12 @@ const BrandCarousel = () => {
         if (lastTimestamp !== 0 && delta > 0) {
           // Move based on time passed
           position += speed * (delta / 16); // Normalize to 60fps
-          
+
           // Reset position once we've scrolled through the first set
           if (position >= totalWidth) {
             position = 0;
           }
-          
+
           if (containerRef.current) {
             containerRef.current.scrollLeft = position;
           }
@@ -59,12 +59,12 @@ const BrandCarousel = () => {
         position = containerRef.current.scrollLeft;
         lastTimestamp = 0; // Reset timestamp for smooth continuation
       }
-      
+
       animationFrameId = requestAnimationFrame(animate);
     };
 
     animationFrameId = requestAnimationFrame(animate);
-    
+
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
@@ -73,18 +73,18 @@ const BrandCarousel = () => {
   // Manual scrolling handlers
   const handleMouseDown = (e) => {
     if (!containerRef.current) return;
-    
+
     setIsDragging(true);
     setStartX(e.pageX - containerRef.current.offsetLeft);
     setScrollLeft(containerRef.current.scrollLeft);
-    
+
     // Change cursor style
     containerRef.current.style.cursor = "grabbing";
   };
 
   const handleMouseUp = () => {
     setIsDragging(false);
-    
+
     if (containerRef.current) {
       containerRef.current.style.cursor = "grab";
     }
@@ -92,7 +92,7 @@ const BrandCarousel = () => {
 
   const handleMouseMove = (e) => {
     if (!isDragging || !containerRef.current) return;
-    
+
     e.preventDefault();
     const x = e.pageX - containerRef.current.offsetLeft;
     const walk = (x - startX) * 2; // Multiply for faster scroll effect
@@ -102,7 +102,7 @@ const BrandCarousel = () => {
   // Touch events for mobile devices
   const handleTouchStart = (e) => {
     if (!containerRef.current) return;
-    
+
     setIsDragging(true);
     setStartX(e.touches[0].pageX - containerRef.current.offsetLeft);
     setScrollLeft(containerRef.current.scrollLeft);
@@ -110,7 +110,7 @@ const BrandCarousel = () => {
 
   const handleTouchMove = (e) => {
     if (!isDragging || !containerRef.current) return;
-    
+
     const x = e.touches[0].pageX - containerRef.current.offsetLeft;
     const walk = (x - startX) * 2;
     containerRef.current.scrollLeft = scrollLeft - walk;
@@ -124,7 +124,7 @@ const BrandCarousel = () => {
   const handleMouseLeave = () => {
     if (isDragging) {
       setIsDragging(false);
-      
+
       if (containerRef.current) {
         containerRef.current.style.cursor = "grab";
       }
@@ -133,18 +133,13 @@ const BrandCarousel = () => {
 
   return (
     <div className="w-full overflow-hidden py-8">
-      {/* Instructions for users */}
-      <p className="text-center text-gray-500 text-sm mb-4">
-        Drag to scroll through brands
-      </p>
-      
       {/* Carousel container with grab cursor and event handlers */}
-      <div 
+      <div
         ref={containerRef}
         className="flex cursor-grab"
-        style={{ 
-          scrollBehavior: 'auto',
-          overflowX: 'hidden'
+        style={{
+          scrollBehavior: "auto",
+          overflowX: "hidden",
         }}
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
@@ -156,39 +151,39 @@ const BrandCarousel = () => {
       >
         {/* First set of brands in a grid */}
         <div className="grid grid-cols-7 gap-4 min-w-max">
-          {brands.map(brand => (
-            <div 
-              key={brand.id} 
+          {brands.map((brand) => (
+            <div
+              key={brand.id}
               className="w-32 h-16 flex items-center justify-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
             >
-              <img 
-                src={brand.image} 
-                alt={brand.name} 
-                className="h-12 w-auto object-contain" 
+              <img
+                src={brand.image}
+                alt={brand.name}
+                className="h-12 w-auto object-contain"
                 draggable="false" // Prevent image dragging interfering with carousel drag
               />
             </div>
           ))}
         </div>
-        
+
         {/* Duplicated set for infinite effect */}
         <div className="grid grid-cols-7 gap-4 min-w-max">
-          {brands.map(brand => (
-            <div 
-              key={`${brand.id}-clone`} 
+          {brands.map((brand) => (
+            <div
+              key={`${brand.id}-clone`}
               className="w-32 h-16 flex items-center justify-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
             >
-              <img 
-                src={brand.image} 
-                alt={brand.name} 
-                className="h-12 w-auto object-contain" 
+              <img
+                src={brand.image}
+                alt={brand.name}
+                className="h-12 w-auto object-contain"
                 draggable="false" // Prevent image dragging
               />
             </div>
           ))}
         </div>
       </div>
-      
+
       {/* Visual indicators */}
       <div className="flex justify-center mt-4 space-x-2">
         <div className="w-8 h-1 bg-blue-500 rounded"></div>
