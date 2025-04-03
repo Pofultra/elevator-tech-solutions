@@ -21,7 +21,7 @@ const Services = () => {
         {
           title: "Elevator Certification",
           description: "Professional certification services to ensure your elevators meet all local and state regulations.",
-          icon: "ri-certified-line",
+          icon: "ri-award-line",
           features: ["Annual inspections", "Documentation preparation", "Code compliance verification", "Safety certification"]
         },
         {
@@ -57,7 +57,7 @@ const Services = () => {
         {
           title: "Upgrade Electrical Main Disconnect In Machine Room",
           description: "Professional upgrades for machine room electrical disconnects to improve safety and reliability.",
-          icon: "ri-switch-line",
+          icon: "ri-flashlight-line",
           features: ["Modern safety features", "Code compliance", "Improved maintenance access", "Enhanced system protection"]
         },
         {
