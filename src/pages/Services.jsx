@@ -66,12 +66,7 @@ const Services = () => {
           icon: "ri-door-open-line",
           features: ["High-quality components", "Improved door operation", "Reduced noise levels", "Enhanced reliability"]
         },
-        {
-          title: "Safety Edge Installation (Proximity)",
-          description: "Installation of proximity safety edges to prevent door closing accidents and improve operation.",
-          icon: "ri-safe-line",
-          features: ["Advanced sensor technology", "Non-contact detection", "Easy maintenance", "Extended service life"]
-        },
+        
         {
           title: "GAL Door Operator Upgrade",
           description: "Specialized upgrades for GAL door operators to enhance performance and reliability.",
@@ -151,12 +146,7 @@ const Services = () => {
           icon: "ri-door-open-line",
           features: ["Componentes de alta calidad", "Operación mejorada de puertas", "Niveles de ruido reducidos", "Confiabilidad mejorada"]
         },
-        {
-          title: "Instalación de Bordes de Seguridad (Proximidad)",
-          description: "Instalación de bordes de seguridad de proximidad para prevenir accidentes de cierre de puertas y mejorar la operación.",
-          icon: "ri-safe-line",
-          features: ["Tecnología avanzada de sensores", "Detección sin contacto", "Fácil mantenimiento", "Vida útil extendida"]
-        },
+        
         {
           title: "Actualización de Operadores de Puertas GAL",
           description: "Actualizaciones especializadas para operadores de puertas GAL para mejorar el rendimiento y la confiabilidad.",
