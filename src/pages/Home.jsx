@@ -194,7 +194,7 @@ const Home = () => {
               <div className="relative h-48 bg-[#213b6a]">
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#457ad8] mb-4">
-                    <i className="ri-tools-fill text-white text-2xl"></i>
+                    <i className="ri-door-lock-box-line text-white text-2xl"></i>
                   </div>
                   <h3 className="text-xl font-semibold text-white text-center px-4">
                     {t("home.services.item1")}
@@ -208,7 +208,7 @@ const Home = () => {
               <div className="relative h-48 bg-[#213b6a]">
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#457ad8] mb-4">
-                    <i className="ri-medal-line text-white text-2xl"></i>
+                    <i className="ri-tools-line text-white text-2xl"></i>
                   </div>
                   <h3 className="text-xl font-semibold text-white text-center px-4">
                     {t("home.services.item2")}
@@ -222,7 +222,7 @@ const Home = () => {
               <div className="relative h-48 bg-[#213b6a]">
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#457ad8] mb-4">
-                    <i className="ri-3d-cube-sphere-line text-white text-2xl"></i>
+                    <i className="ri-award-line text-white text-2xl"></i>
                   </div>
                   <h3 className="text-xl font-semibold text-white text-center px-4">
                     {t("home.services.item3")}
@@ -236,7 +236,7 @@ const Home = () => {
               <div className="relative h-48 bg-[#213b6a]">
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#457ad8] mb-4">
-                    <i className="ri-shield-check-line text-white text-2xl"></i>
+                    <i className="ri-sensor-line text-white text-2xl"></i>
                   </div>
                   <h3 className="text-xl font-semibold text-white text-center px-4">
                     {t("home.services.item4")}
