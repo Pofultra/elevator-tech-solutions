@@ -231,7 +231,7 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <div className="bg-blue-900 text-white rounded-lg shadow-lg p-8 h-full">
+              <div className="bg-blue-900 text-white rounded-lg shadow-lg p-8 h-auto">
                 <h2 className="text-2xl font-bold mb-8">
                   {t("contact.contact_info.heading")}
                 </h2>
@@ -261,29 +261,6 @@ const Contact = () => {
                       </h3>
                       <p className="text-blue-100 mt-1">
                         {t("contact.contact_info.email.line")}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start">
-                    <div className="shrink-0 bg-blue-800 p-3 rounded-full mr-4">
-                      <i className="ri-time-line text-xl"></i>
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg">
-                        {t("contact.contact_info.hours.title")}
-                      </h3>
-                      <p className="text-blue-100 mt-1">
-                        {t("contact.contact_info.hours.line1")}
-                      </p>
-                      <p className="text-blue-100">
-                        {t("contact.contact_info.hours.line2")}
-                      </p>
-                      <p className="text-blue-100">
-                        {t("contact.contact_info.hours.line3")}
-                      </p>
-                      <p className="text-blue-100 font-semibold mt-2">
-                        {t("contact.contact_info.hours.line4")}
                       </p>
                     </div>
                   </div>
