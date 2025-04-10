@@ -1,4 +1,3 @@
-// src/components/BrandCarousel.jsx
 import React, { useRef, useEffect, useState } from "react";
 import brandlogo1 from "/images/Alphacontrollers_logo.png";
 import brandlogo2 from "/images/EC-logo-home.png";
@@ -11,8 +10,9 @@ import brandlogo7 from "/images/MCE_Logo_w_tagline_colored.png";
 const BrandCarousel = () => {
   const containerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const startXRef = useRef(0); // Posición inicial del cursor al arrastrar
+  const scrollPositionRef = useRef(0); // Posición actual del scroll
+  const animationFrameIdRef = useRef(null); // Referencia para cancelar la animación
 
   // Sample brand logos - replace with actual paths
   const brands = [
@@ -29,44 +29,40 @@ const BrandCarousel = () => {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    let position = 0;
+    let lastTimestamp = 0;
     const speed = 0.5; // pixels per frame
     const totalWidth = containerRef.current.scrollWidth / 2;
-    let animationFrameId;
-    let lastTimestamp = 0;
 
     const animate = (timestamp) => {
-      // Only update if not dragging
       if (!isDragging) {
-        // Calculate time delta for smooth animation regardless of frame rate
         const delta = timestamp - lastTimestamp;
         if (lastTimestamp !== 0 && delta > 0) {
-          // Move based on time passed
-          position += speed * (delta / 16); // Normalize to 60fps
+          // Incrementar la posición basada en el tiempo transcurrido
+          scrollPositionRef.current += speed * (delta / 16); // Normalize to 60fps
 
-          // Reset position once we've scrolled through the first set
-          if (position >= totalWidth) {
-            position = 0;
+          // Resetear la posición cuando se alcanza el final del primer conjunto
+          if (scrollPositionRef.current >= totalWidth) {
+            scrollPositionRef.current = 0;
           }
 
           if (containerRef.current) {
-            containerRef.current.scrollLeft = position;
+            containerRef.current.scrollLeft = scrollPositionRef.current;
           }
         }
         lastTimestamp = timestamp;
       } else {
-        // When dragging, update position to match the current scroll
-        position = containerRef.current.scrollLeft;
-        lastTimestamp = 0; // Reset timestamp for smooth continuation
+        // Al arrastrar, actualizar la posición actual del scroll
+        scrollPositionRef.current = containerRef.current.scrollLeft;
+        lastTimestamp = 0; // Resetear el timestamp para continuar suavemente
       }
 
-      animationFrameId = requestAnimationFrame(animate);
+      animationFrameIdRef.current = requestAnimationFrame(animate);
     };
 
-    animationFrameId = requestAnimationFrame(animate);
+    animationFrameIdRef.current = requestAnimationFrame(animate);
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      cancelAnimationFrame(animationFrameIdRef.current);
     };
   }, [isDragging]);
 
@@ -75,16 +71,12 @@ const BrandCarousel = () => {
     if (!containerRef.current) return;
 
     setIsDragging(true);
-    setStartX(e.pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
-
-    // Change cursor style
+    startXRef.current = e.pageX - containerRef.current.offsetLeft; // Guardar posición inicial
     containerRef.current.style.cursor = "grabbing";
   };
 
   const handleMouseUp = () => {
     setIsDragging(false);
-
     if (containerRef.current) {
       containerRef.current.style.cursor = "grab";
     }
@@ -94,9 +86,12 @@ const BrandCarousel = () => {
     if (!isDragging || !containerRef.current) return;
 
     e.preventDefault();
-    const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Multiply for faster scroll effect
-    containerRef.current.scrollLeft = scrollLeft - walk;
+    const currentX = e.pageX - containerRef.current.offsetLeft;
+    const walk = (currentX - startXRef.current) * 2; // Multiplicador para efecto más rápido
+
+    // Actualizar scrollLeft directamente
+    containerRef.current.scrollLeft -= walk;
+    startXRef.current = currentX; // Actualizar posición inicial para el siguiente movimiento
   };
 
   // Touch events for mobile devices
@@ -104,16 +99,17 @@ const BrandCarousel = () => {
     if (!containerRef.current) return;
 
     setIsDragging(true);
-    setStartX(e.touches[0].pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
+    startXRef.current = e.touches[0].pageX - containerRef.current.offsetLeft;
   };
 
   const handleTouchMove = (e) => {
     if (!isDragging || !containerRef.current) return;
 
-    const x = e.touches[0].pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    containerRef.current.scrollLeft = scrollLeft - walk;
+    const currentX = e.touches[0].pageX - containerRef.current.offsetLeft;
+    const walk = (currentX - startXRef.current) * 2;
+
+    containerRef.current.scrollLeft -= walk;
+    startXRef.current = currentX;
   };
 
   const handleTouchEnd = () => {
@@ -124,7 +120,6 @@ const BrandCarousel = () => {
   const handleMouseLeave = () => {
     if (isDragging) {
       setIsDragging(false);
-
       if (containerRef.current) {
         containerRef.current.style.cursor = "grab";
       }
