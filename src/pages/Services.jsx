@@ -22,17 +22,17 @@ const Services = () => {
           title: "Elevator Certification",
           description: "Professional certification services to ensure your elevators meet all local and state regulations.",
           icon: "ri-award-line",
-          features: ["Annual inspections", "Documentation preparation", "Code compliance verification", "Safety certification"]
+          features: ["Annual inspections", "Code compliance verification"]
         },
         {
           title: "Violations Corrections",
           description: "Expert solutions to address and resolve elevator code violations promptly and effectively.",
           icon: "ri-error-warning-line",
-          features: ["Comprehensive violation assessment", "Correction plan development", "Swift implementation", "Regulatory compliance"]
+          features: ["Elevetor prepair for reinspection"]
         },
         {
           title: "Elevator Consulting",
-          description: "Professional guidance for elevator systems in new construction or renovation projects.",
+          description: "Professional guidance for elevator systems.",
           icon: "ri-question-answer-line",
           features: ["System recommendations", "Budget planning", "Technical specifications", "Project oversight"]
         },
@@ -40,11 +40,11 @@ const Services = () => {
           title: "Door Lock Monitoring System Installation",
           description: "Advanced door lock monitoring systems for enhanced elevator safety and security.",
           icon: "ri-door-lock-box-line",
-          features: ["Code-compliant systems", "Real-time monitoring", "Malfunction alerts", "Enhanced passenger safety"]
+          features: ["Door safety system"]
         },
         {
           title: "3D Proximity Edge Installation",
-          description: "State-of-the-art 3D proximity edge technology for improved door safety and operation.",
+          description: "3D proximity edge technology for improved door safety and operation.",
           icon: "ri-sensor-line",
           features: ["Advanced obstacle detection", "Reduced door incidents", "Seamless integration", "Extended equipment life"]
         },
@@ -102,17 +102,17 @@ const Services = () => {
           title: "Certificación de Elevadores",
           description: "Servicios profesionales de certificación para garantizar que sus elevadores cumplan con todas las regulaciones locales y estatales.",
           icon: "ri-certified-line",
-          features: ["Inspecciones anuales", "Preparación de documentación", "Verificación de cumplimiento de códigos", "Certificación de seguridad"]
+          features: ["Inspecciones anuales", "Verificación de cumplimiento de códigos"]
         },
         {
           title: "Correcciones de Violaciones",
           description: "Soluciones expertas para abordar y resolver violaciones de código de elevadores de manera rápida y efectiva.",
           icon: "ri-error-warning-line",
-          features: ["Evaluación integral de violaciones", "Desarrollo de plan de corrección", "Implementación rápida", "Cumplimiento normativo"]
+          features: ["Preparación para reinspección del elevador"]
         },
         {
           title: "Consultoría de Elevadores",
-          description: "Orientación profesional para sistemas de elevadores en proyectos de nueva construcción o renovación.",
+          description: "Orientación profesional para sistemas de elevadores.",
           icon: "ri-question-answer-line",
           features: ["Recomendaciones de sistemas", "Planificación de presupuesto", "Especificaciones técnicas", "Supervisión de proyectos"]
         },
@@ -120,11 +120,11 @@ const Services = () => {
           title: "Instalación de Sistema de Monitoreo de Cerraduras de Puertas",
           description: "Sistemas avanzados de monitoreo de cerraduras de puertas para mejorar la seguridad de los elevadores.",
           icon: "ri-door-lock-box-line",
-          features: ["Sistemas conformes con los códigos", "Monitoreo en tiempo real", "Alertas de mal funcionamiento", "Mayor seguridad para pasajeros"]
+          features: ["Sistema de seguridad avanzado"]
         },
         {
           title: "Instalación de Bordes de Proximidad 3D",
-          description: "Tecnología de vanguardia de bordes de proximidad 3D para mejorar la seguridad y operación de las puertas.",
+          description: "Tecnología de vanguardia de bordes de proximidad 3D.",
           icon: "ri-sensor-line",
           features: ["Detección avanzada de obstáculos", "Reducción de incidentes con puertas", "Integración perfecta", "Mayor vida útil del equipo"]
         },
