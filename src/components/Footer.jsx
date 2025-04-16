@@ -17,10 +17,7 @@ const Footer = () => {
               alt="Elevator Tech Solutions"
               className="h-12 mb-4"
             />
-            <p className="text-gray-400 text-sm">
-              Professional elevator installation, maintenance, and repair
-              services in South Florida.
-            </p>
+            <p className="text-gray-400 text-sm">{t("meta.defaultTitle")}</p>
           </div>
 
           {/* Quick Links */}
