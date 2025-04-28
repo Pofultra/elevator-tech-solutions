@@ -6,18 +6,17 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "../context/LanguageContext";
 
 const SEO = ({
-  titleKey, // La clave para el título en los archivos de traducción
-  descriptionKey, // La clave para la descripción en los archivos de traducción
+  titleKey,
+  descriptionKey,
   image = "/images/og-image.jpg",
   article = false,
-  extraKeywords = "", // Palabras clave adicionales específicas de la página
+  extraKeywords = "",
 }) => {
   const { pathname } = useLocation();
   const { t } = useTranslation();
   const { language } = useLanguage();
   const siteUrl = "https://elevatorts.com";
 
-  // Obtener el título y la descripción de los archivos de traducción
   const title = titleKey ? t(titleKey) : t("meta.defaultTitle");
   const description = descriptionKey
     ? t(descriptionKey)
@@ -30,8 +29,6 @@ const SEO = ({
   const languageKeywords = {
     en: "elevator repair, elevator installation, elevator maintenance, South Florida",
     es: "reparación de elevadores, instalación de elevadores, mantenimiento de elevadores, Sur de Florida",
-    fr: "réparation d'ascenseurs, installation d'ascenseurs, entretien d'ascenseurs, Sud de la Floride",
-    de: "Aufzugreparatur, Aufzuginstallation, Aufzugwartung, Süd-Florida",
   };
 
   // Combinar palabras clave base, específicas del idioma y extras

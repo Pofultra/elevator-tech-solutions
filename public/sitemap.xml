@@ -10,8 +10,6 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://elevatorts.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://elevatorts.com/?lng=es"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatorts.com/?lng=fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://elevatorts.com/?lng=de"/>
   </url>
   
   <!-- Página About -->
@@ -22,8 +20,6 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://elevatorts.com/about"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://elevatorts.com/about?lng=es"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatorts.com/about?lng=fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://elevatorts.com/about?lng=de"/>
   </url>
   
   <!-- Página Services -->
@@ -34,8 +30,6 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://elevatorts.com/services"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://elevatorts.com/services?lng=es"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatorts.com/services?lng=fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://elevatorts.com/services?lng=de"/>
   </url>
   
   <!-- Página Projects -->
@@ -46,8 +40,6 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://elevatorts.com/projects"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://elevatorts.com/projects?lng=es"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatorts.com/projects?lng=fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://elevatorts.com/projects?lng=de"/>
   </url>
   
   <!-- Página Brands -->
@@ -58,8 +50,6 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://elevatorts.com/brands"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://elevatorts.com/brands?lng=es"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatorts.com/brands?lng=fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://elevatorts.com/brands?lng=de"/>
   </url>
   
   <!-- Página Testimonials -->
@@ -70,8 +60,6 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://elevatorts.com/testimonials"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://elevatorts.com/testimonials?lng=es"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatorts.com/testimonials?lng=fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://elevatorts.com/testimonials?lng=de"/>
   </url>
   
   <!-- Página Contact -->
@@ -82,7 +70,5 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://elevatorts.com/contact"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://elevatorts.com/contact?lng=es"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatorts.com/contact?lng=fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://elevatorts.com/contact?lng=de"/>
   </url>
 </urlset>

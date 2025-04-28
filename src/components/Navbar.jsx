@@ -39,21 +39,33 @@ const Navbar = () => {
         </div>
       </Link>
 
-      {/* Botón de menú y selector de idioma */}
+      {/* Selector de idioma y botón hamburguesa */}
       <div className="flex items-center space-x-3">
         <LanguageSelector />
         <button
-          className="text-xl transition-all duration-300 text-white"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          className="flex items-center justify-center text-xl transition-all duration-300 text-white hover:text-yellow-500"
+          onClick={() => {
+            const newState = !menuOpen;
+            console.log("Estado del menú cambiando a:", newState);
+            setMenuOpen(newState);
+          }}
+          aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
         >
-          <i className={menuOpen ? "ri-close-line" : "ri-menu-line"}></i>
+          {menuOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </button>
       </div>
 
-      {/* Menú desplegable */}
+      {/* Menú desplegable que solo aparece cuando menuOpen es true */}
       {menuOpen && (
-        <div className="absolute top-full right-0 bg-gray-800 text-white p-3 w-44 rounded-md shadow-lg mt-1">
+        <div className="absolute top-full right-0 bg-gray-800 text-white p-3 w-44 rounded-md shadow-lg mt-1 z-50">
           <ul className="space-y-1">
             <li>
               <Link

@@ -1,39 +1,16 @@
 // src/pages/Home.jsx
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useLanguage } from "../context/LanguageContext";
 import { useTranslation } from "react-i18next";
 import BrandCarousel from "../components/BrandCarousel";
-import SEO from "../components/SEO"; // Import our SEO component
+import SEO from "../components/SEO";
 import backgroundImage from "/images/home_fondo.webp";
 import aboutImage from "/images/rectangle1.webp";
 
 const Home = () => {
-  const { language } = useLanguage();
   const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
 
-  // SEO metadata based on language
-  const seoData = {
-    en: {
-      title:
-        "Elevator Tech Solutions | Professional Elevator Services in South Florida",
-      description:
-        "Certified elevator contractor specializing in installation, maintenance, and repair of commercial and residential elevators throughout South Florida.",
-      keywords:
-        "elevator repair, elevator installation, elevator maintenance, elevator certification, South Florida",
-    },
-    es: {
-      title:
-        "Soluciones Tech para Elevadores | Servicios Profesionales de Elevadores en el Sur de Florida",
-      description:
-        "Contratista certificado de elevadores especializado en instalación, mantenimiento y reparación de elevadores comerciales y residenciales en todo el sur de Florida.",
-      keywords:
-        "reparación de elevadores, instalación de elevadores, mantenimiento de elevadores, certificación de elevadores, Sur de Florida",
-    },
-  };
-
-  // Handle scroll events for navbar transparency
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -49,16 +26,12 @@ const Home = () => {
     };
   }, []);
 
-  // Get SEO data for current language
-  const currentSeo = seoData[language] || seoData.en;
-
   return (
     <>
-      {/* SEO Component */}
       <SEO
         titleKey="meta.home.title"
         descriptionKey="meta.home.description"
-        extraKeywords="elevator emergency service, 24/7 elevator repair"
+        extraKeywords={t("meta.home.keywords")}
       />
 
       {/* Hero Section */}
@@ -78,20 +51,18 @@ const Home = () => {
           <div className="absolute inset-0 bg-[#050f22] bg-opacity-20"></div>
         </div>
 
-        {/* Content container using grid for better layout control */}
         <div className="relative z-10 w-full h-full px-4 sm:px-6 md:px-8 py-10">
           <div className="h-full grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {/* Left column: Title and CTA */}
             <div className="flex flex-col justify-center items-start pl-3 sm:pl-6 md:pl-8">
-              <h1 className="text-white font-sf font-extrabold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight">
+              <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight">
                 {t("home.hero.title")}
               </h1>
-              <p className="text-white font-sf text-sm sm:text-base mt-2 mb-6 md:mb-8">
+              <p className="text-white text-sm sm:text-base mt-2 mb-6 md:mb-8">
                 {t("home.hero.subtitle")}
               </p>
               <Link
                 to="/contact"
-                className="inline-block bg-[#457ad8] text-white py-2 px-4 sm:py-3 sm:px-6 rounded-md shadow-md font-sf hover:bg-[#3968c0] transition-colors text-sm sm:text-base"
+                className="inline-block bg-[#457ad8] text-white py-2 px-4 sm:py-3 sm:px-6 rounded-md shadow-md hover:bg-[#3968c0] transition-colors text-sm sm:text-base"
               >
                 {t("home.hero.cta")}
               </Link>
@@ -126,28 +97,9 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          {/* Contact buttons - Fixed bottom position */}
-          <div className="absolute bottom-10 sm:bottom-12 md:bottom-14 left-1/2 transform -translate-x-1/2 flex space-x-3 sm:space-x-4">
-            <a
-              href="https://wa.me/6452409570"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Contact us via WhatsApp"
-              className="bg-white p-2 sm:p-3 rounded-full shadow-md hover:bg-gray-100 transition-colors hover:scale-110 transform duration-300"
-            >
-              <i className="ri-whatsapp-line text-green-500 text-lg sm:text-xl"></i>
-            </a>
-            <a
-              href="mailto:elevatorts@gmail.com"
-              aria-label="Contact us via Email"
-              className="bg-white p-2 sm:p-3 rounded-full shadow-md hover:bg-gray-100 transition-colors hover:scale-110 transform duration-300"
-            >
-              <i className="ri-mail-line text-blue-500 text-lg sm:text-xl"></i>
-            </a>
-          </div>
         </div>
       </section>
+
       {/* Rest of the Home page components remain the same */}
       {/* About Section */}
       <section className="py-16 bg-white border-b border-gray-200" id="about">
