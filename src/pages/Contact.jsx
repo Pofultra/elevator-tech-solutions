@@ -153,12 +153,10 @@ const Contact = () => {
                     className="block text-gray-700 font-medium mb-2"
                   >
                     {t("contact.form.service")}{" "}
-                    <span className="text-red-500">*</span>
                   </label>
                   <select
                     id="service"
                     name="service"
-                    required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="">
