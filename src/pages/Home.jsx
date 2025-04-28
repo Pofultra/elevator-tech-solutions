@@ -33,7 +33,6 @@ const Home = () => {
         descriptionKey="meta.home.description"
         extraKeywords={t("meta.home.keywords")}
       />
-
       {/* Hero Section */}
       <section
         className="relative h-screen flex items-center justify-center border-b-4 border-[#457ad8] max-w-4xl mx-auto overflow-hidden"
@@ -99,7 +98,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Rest of the Home page components remain the same */}
       {/* About Section */}
       <section className="py-16 bg-white border-b border-gray-200" id="about">
@@ -130,7 +128,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section
         className="py-16 bg-gray-50 border-b border-gray-200"
@@ -215,7 +212,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section
         className="py-16 bg-gray-50 border-b border-gray-200"
@@ -256,7 +252,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Brands Section */}
       <section className="py-12 bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-6">
@@ -268,7 +263,6 @@ const Home = () => {
           <BrandCarousel />
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-16 bg-[#050f22] text-white relative" id="contact">
         <div className="absolute inset-0 bg-opacity-70"></div>
@@ -280,12 +274,48 @@ const Home = () => {
           <div className="max-w-xl mx-auto">
             <form
               className="space-y-6"
-              name="contact"
-              method="POST"
-              data-netlify="true"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                
+                const form = e.target;
+                const submitButton = form.querySelector('button[type="submit"]');
+                
+                // Cambiar estado del botón
+                if (submitButton) {
+                  submitButton.disabled = true;
+                  submitButton.textContent = "Enviando...";
+                }
+                
+                try {
+                  // Enviar formulario usando fetch en lugar de redirección
+                  const formData = new FormData(form);
+                  const response = await fetch("https://formspree.io/f/xkgrogwa", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                      "Accept": "application/json"
+                    }
+                  });
+                  
+                  if (response.ok) {
+                    // Éxito - limpiar formulario
+                    form.reset();
+                    alert(t("contact.form.success"));
+                  } else {
+                    throw new Error("Hubo un error al enviar el formulario");
+                  }
+                } catch (error) {
+                  console.error("Error:", error);
+                  alert(t("contact.form.error"));
+                } finally {
+                  // Restaurar botón
+                  if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = t("home.contact.cta");
+                  }
+                }
+              }}
             >
-              <input type="hidden" name="form-name" value="contact" />
-
               <div className="flex items-center py-2 bg-transparent border-b border-white">
                 <div className="mr-4">
                   <i className="ri-user-line text-xl"></i>
@@ -373,8 +403,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </section>    </>
   );
 };
 

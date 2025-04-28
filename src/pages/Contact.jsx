@@ -5,43 +5,41 @@ import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitSuccess(false);
     setSubmitError(false);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
+    try {
+      const form = e.target;
+
+      // Enviar el formulario a Formspree
+      const response = await fetch("https://formspree.io/f/xkgrogwa", {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
       });
-    }, 1500);
+
+      if (response.ok) {
+        // Si la respuesta es exitosa
+        setSubmitSuccess(true);
+        form.reset();
+      } else {
+        throw new Error("Error en el envío del formulario");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setSubmitError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -93,7 +91,11 @@ const Contact = () => {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit}>
+              <form
+                action="https://formspree.io/f/xkgrogwa"
+                method="POST"
+                onSubmit={handleSubmit}
+              >
                 <div className="mb-4">
                   <label
                     htmlFor="name"
@@ -106,8 +108,6 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -126,8 +126,6 @@ const Contact = () => {
                       type="email"
                       id="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleChange}
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
@@ -144,8 +142,6 @@ const Contact = () => {
                       type="tel"
                       id="phone"
                       name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
@@ -162,8 +158,6 @@ const Contact = () => {
                   <select
                     id="service"
                     name="service"
-                    value={formData.service}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
@@ -205,8 +199,6 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     required
                     rows="5"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -276,7 +268,8 @@ const Contact = () => {
                     <i className="ri-instagram-line text-xl"></i>
                   </a>
                   <a
-                    href="mailto:elevatorts@gmail.com"
+                    href="mailto:hivikipof@gmail.com"
+                    // href="mailto:elevatorts@gmail.com"
                     className="bg-blue-800 p-3 rounded-full hover:bg-blue-700 transition-colors"
                   >
                     <i className="ri-mail-line text-xl"></i>
