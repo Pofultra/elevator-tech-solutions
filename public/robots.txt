@@ -1,9 +1,9 @@
-# robots.txt for elevatortechsolutions.com
+# robots.txt for elevatorts.com
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://elevatortechsolutions.com/sitemap.xml
+Sitemap: https://elevatorts.com/sitemap.xml
 
 # Crawl-delay for all bots
 Crawl-delay: 10

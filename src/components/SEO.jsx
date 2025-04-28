@@ -15,7 +15,7 @@ const SEO = ({
   const { pathname } = useLocation();
   const { t } = useTranslation();
   const { language } = useLanguage();
-  const siteUrl = "https://elevatortechsolutions.com";
+  const siteUrl = "https://elevatorts.com";
 
   // Obtener el título y la descripción de los archivos de traducción
   const title = titleKey ? t(titleKey) : t("meta.defaultTitle");
@@ -58,8 +58,6 @@ const SEO = ({
       <meta name="keywords" content={seo.keywords} />
       <link rel="canonical" href={canonical} />
       <meta name="language" content={seo.lang} />
-
-      
 
       {/* Información de contacto */}
       <meta name="contact:email" content="elevatorts@gmail.com" />
