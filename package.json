@@ -1,7 +1,7 @@
 {
-  "name": "vip24-transfers",
+  "name": "elevator-tech-solutions",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
