@@ -272,101 +272,128 @@ const Home = () => {
           </h2>
 
           <div className="max-w-xl mx-auto">
-            <form
-              className="space-y-6"
-              onSubmit={async (e) => {
-                e.preventDefault();
-                
-                const form = e.target;
-                const submitButton = form.querySelector('button[type="submit"]');
-                
-                // Cambiar estado del botón
-                if (submitButton) {
-                  submitButton.disabled = true;
-                  submitButton.textContent = "Enviando...";
-                }
-                
-                try {
-                  // Enviar formulario usando fetch en lugar de redirección
-                  const formData = new FormData(form);
-                  const response = await fetch("https://formspree.io/f/xkgrogwa", {
-                    method: "POST",
-                    body: formData,
-                    headers: {
-                      "Accept": "application/json"
-                    }
-                  });
-                  
-                  if (response.ok) {
-                    // Éxito - limpiar formulario
-                    form.reset();
-                    alert(t("contact.form.success"));
-                  } else {
-                    throw new Error("Hubo un error al enviar el formulario");
-                  }
-                } catch (error) {
-                  console.error("Error:", error);
-                  alert(t("contact.form.error"));
-                } finally {
-                  // Restaurar botón
-                  if (submitButton) {
-                    submitButton.disabled = false;
-                    submitButton.textContent = t("home.contact.cta");
-                  }
-                }
-              }}
-            >
-              <div className="flex items-center py-2 bg-transparent border-b border-white">
-                <div className="mr-4">
-                  <i className="ri-user-line text-xl"></i>
-                </div>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder={t("home.contact.name")}
-                  className="appearance-none bg-transparent border-none w-full text-white py-1 px-2 leading-tight focus:outline-none"
-                  required
-                  aria-label="Your name"
-                />
-              </div>
+            {/* Estado para manejar las notificaciones */}
+            {(() => {
+              const [isSubmitting, setIsSubmitting] = useState(false);
+              const [submitSuccess, setSubmitSuccess] = useState(false);
+              const [submitError, setSubmitError] = useState(false);
 
-              <div className="flex items-center py-2 bg-transparent border-b border-white">
-                <div className="mr-4">
-                  <i className="ri-mail-line text-xl"></i>
-                </div>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder={t("contact.email")}
-                  className="appearance-none bg-transparent border-none w-full text-white py-1 px-2 leading-tight focus:outline-none"
-                  required
-                  aria-label="Your email"
-                />
-              </div>
+              return (
+                <>
+                  {/* Mensajes de notificación */}
+                  {submitSuccess && (
+                    <div className="bg-green-100 border border-green-200 text-green-800 p-4 rounded-md mb-6">
+                      {t("contact.form.success")}
+                    </div>
+                  )}
 
-              <div className="flex items-center py-2 bg-transparent border-b border-white">
-                <div className="mr-4">
-                  <i className="ri-message-2-line text-xl"></i>
-                </div>
-                <textarea
-                  name="message"
-                  placeholder={t("contact.message")}
-                  className="appearance-none bg-transparent border-none w-full text-white py-1 px-2 leading-tight focus:outline-none"
-                  required
-                  rows="3"
-                  aria-label="Your message"
-                ></textarea>
-              </div>
+                  {submitError && (
+                    <div className="bg-red-100 border border-red-200 text-red-800 p-4 rounded-md mb-6">
+                      {t("contact.form.error")}
+                    </div>
+                  )}
 
-              <div className="flex justify-center pt-6">
-                <button
-                  type="submit"
-                  className="bg-[#457ad8] hover:bg-[#213b6a] text-white py-2 px-6 w-auto rounded-md shadow-md transition-all duration-300 transform hover:scale-105"
-                >
-                  {t("home.contact.cta")}
-                </button>
-              </div>
-            </form>
+                  <form
+                    className="space-y-6"
+                    onSubmit={async (e) => {
+                      e.preventDefault();
+                      setIsSubmitting(true);
+                      setSubmitSuccess(false);
+                      setSubmitError(false);
+
+                      try {
+                        // Enviar formulario usando fetch en lugar de redirección
+                        const formData = new FormData(e.target);
+                        const response = await fetch(
+                          "https://formspree.io/f/xkgrogwa",
+                          {
+                            method: "POST",
+                            body: formData,
+                            headers: {
+                              Accept: "application/json",
+                            },
+                          }
+                        );
+
+                        if (response.ok) {
+                          // Éxito - limpiar formulario
+                          e.target.reset();
+                          setSubmitSuccess(true);
+
+                          // Ocultar mensaje de éxito después de 5 segundos
+                          setTimeout(() => {
+                            setSubmitSuccess(false);
+                          }, 5000);
+                        } else {
+                          throw new Error(
+                            "Hubo un error al enviar el formulario"
+                          );
+                        }
+                      } catch (error) {
+                        console.error("Error:", error);
+                        setSubmitError(true);
+                      } finally {
+                        setIsSubmitting(false);
+                      }
+                    }}
+                  >
+                    <div className="flex items-center py-2 bg-transparent border-b border-white">
+                      <div className="mr-4">
+                        <i className="ri-user-line text-xl"></i>
+                      </div>
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder={t("home.contact.name")}
+                        className="appearance-none bg-transparent border-none w-full text-white py-1 px-2 leading-tight focus:outline-none"
+                        required
+                        aria-label="Your name"
+                      />
+                    </div>
+
+                    <div className="flex items-center py-2 bg-transparent border-b border-white">
+                      <div className="mr-4">
+                        <i className="ri-mail-line text-xl"></i>
+                      </div>
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder={t("contact.email")}
+                        className="appearance-none bg-transparent border-none w-full text-white py-1 px-2 leading-tight focus:outline-none"
+                        required
+                        aria-label="Your email"
+                      />
+                    </div>
+
+                    <div className="flex items-center py-2 bg-transparent border-b border-white">
+                      <div className="mr-4">
+                        <i className="ri-message-2-line text-xl"></i>
+                      </div>
+                      <textarea
+                        name="message"
+                        placeholder={t("contact.message")}
+                        className="appearance-none bg-transparent border-none w-full text-white py-1 px-2 leading-tight focus:outline-none"
+                        required
+                        rows="3"
+                        aria-label="Your message"
+                      ></textarea>
+                    </div>
+
+                    <div className="flex justify-center pt-6">
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="bg-[#457ad8] hover:bg-[#213b6a] text-white py-2 px-6 w-auto rounded-md shadow-md transition-all duration-300 transform hover:scale-105 disabled:bg-blue-400"
+                      >
+                        {isSubmitting
+                          ? t("contact.form.buttonSending")
+                          : t("home.contact.cta")}
+                      </button>
+                    </div>
+                  </form>
+                </>
+              );
+            })()}
 
             {/* Business Contact Info - Good for SEO */}
             <div className="mt-12 text-center">
@@ -403,7 +430,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>    </>
+      </section>{" "}
+    </>
   );
 };
 
