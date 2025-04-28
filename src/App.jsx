@@ -23,7 +23,7 @@ function App() {
   return (
     <HelmetProvider>
       <LanguageProvider>
-        <Router basename="/elevator-tech-solutions">
+      <Router>
           <ScrollToTop />
           <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
             <Navbar />
