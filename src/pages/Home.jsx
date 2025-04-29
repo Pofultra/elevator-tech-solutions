@@ -102,7 +102,7 @@ const Home = () => {
       {/* About Section */}
       <section className="py-16 bg-white border-b border-gray-200" id="about">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-2">{t("about.title")}</h2>
+          <h2 className="text-3xl text-center font-bold mb-2">{t("about.title")}</h2>
           <div className="w-full h-0.5 bg-[#457ad8] mb-8"></div>
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2">
@@ -134,7 +134,7 @@ const Home = () => {
         id="services"
       >
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-2">{t("services.title")}</h2>
+          <h2 className="text-3xl text-center font-bold mb-2">{t("services.title")}</h2>
           <div className="w-full h-0.5 bg-[#457ad8] mb-8"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
@@ -202,14 +202,7 @@ const Home = () => {
             >
               {t("home.services.cta")}
             </Link>
-          </div>
-
-          {/* Pagination Dots */}
-          <div className="flex justify-center mt-8 space-x-2">
-            <div className="w-3 h-3 rounded-full bg-[#457ad8] border border-[#213b6a]"></div>
-            <div className="w-3 h-3 rounded-full bg-[#dcdcdc] border border-[#b0b0b0]"></div>
-            <div className="w-3 h-3 rounded-full bg-[#dcdcdc] border border-[#b0b0b0]"></div>
-          </div>
+          </div>          
         </div>
       </section>
       {/* Testimonials Section */}
@@ -218,7 +211,7 @@ const Home = () => {
         id="testimonials"
       >
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-2">
+          <h2 className="text-3xl text-center font-bold mb-2">
             {t("home.testimonials.title")}
           </h2>
           <div className="w-full h-0.5 bg-[#457ad8] mb-8"></div>

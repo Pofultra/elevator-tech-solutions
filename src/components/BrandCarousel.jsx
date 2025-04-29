@@ -177,14 +177,7 @@ const BrandCarousel = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Visual indicators */}
-      <div className="flex justify-center mt-4 space-x-2">
-        <div className="w-8 h-1 bg-blue-500 rounded"></div>
-        <div className="w-8 h-1 bg-gray-300 rounded"></div>
-        <div className="w-8 h-1 bg-gray-300 rounded"></div>
-      </div>
+      </div>      
     </div>
   );
 };
