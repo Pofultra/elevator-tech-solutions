@@ -266,8 +266,7 @@ const Contact = () => {
                     <i className="ri-instagram-line text-xl"></i>
                   </a>
                   <a
-                    href="mailto:hivikipof@gmail.com"
-                    // href="mailto:elevatorts@gmail.com"
+                    href="mailto:elevatorts@gmail.com"
                     className="bg-blue-800 p-3 rounded-full hover:bg-blue-700 transition-colors"
                   >
                     <i className="ri-mail-line text-xl"></i>
