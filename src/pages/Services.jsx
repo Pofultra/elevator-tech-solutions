@@ -8,11 +8,11 @@ const Services = () => {
   const { t } = useTranslation();
 
   const services = [
-    { key: "installation", icon: "ri-building-line" },
-    { key: "maintenance", icon: "ri-tools-line" },
-    { key: "repair", icon: "ri-settings-line" },
-    { key: "modernization", icon: "ri-rocket-line" },
-    { key: "inspection", icon: "ri-shield-check-line" },
+    { key: "certification", icon: "ri-verified-badge-line" },
+    { key: "violations", icon: "ri-error-warning-line" },
+    { key: "consulting", icon: "ri-customer-service-2-line" },
+    { key: "lock", icon: "ri-door-lock-line" },
+    { key: "3d", icon: "ri-sensor-line" },
   ];
 
   const containerVariants = {
@@ -90,6 +90,14 @@ const Services = () => {
                   <p className="text-gray-600 mb-4">
                     {t(`services.${service.key}.description`)}
                   </p>
+                  <ul className="space-y-2">
+                    {t(`services.${service.key}.fixtures`, { returnObjects: true }).map((fixture, index) => (
+                      <li key={index} className="flex items-center text-gray-600">
+                        <i className="ri-checkbox-circle-fill text-green-500 mr-2"></i>
+                        {fixture}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
             ))}

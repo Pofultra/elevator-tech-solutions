@@ -74,25 +74,30 @@
     "title": "Nuestros Servicios",
     "subtitle": "Soluciones Profesionales para Elevadores",
     "intro": "Ofrecemos una amplia gama de servicios para elevadores para satisfacer todas sus necesidades:",
-    "installation": {
-      "title": "Instalación",
-      "description": "Instalación profesional de nuevos sistemas de elevadores para edificios residenciales y comerciales."
+    "certification": {
+      "title": "Certificación",
+      "description": "Servicios de certificación profesional para asegurar que sus elevadores cumplan con todas las regulaciones locales y estatales.",
+      "fixtures": ["Inspecciones anuales", "Verificación de cumplimiento de códigos"]
     },
-    "maintenance": {
-      "title": "Mantenimiento",
-      "description": "Servicios de mantenimiento regular para garantizar que sus elevadores funcionen de manera segura y eficiente."
+    "violations": {
+      "title": "Corrección de Violaciones",
+      "description": "Soluciones expertas para abordar y resolver violaciones de código de elevadores de manera rápida y efectiva.",
+      "fixtures": ["Reparación de elevadores para reinspección"]
     },
-    "repair": {
-      "title": "Reparación",
-      "description": "Servicios de reparación rápidos y confiables para todas las marcas y modelos de elevadores."
+    "consulting": {
+      "title": "Consultoría de Elevadores",
+      "description": "Orientación profesional para sistemas de elevadores.",
+      "fixtures": ["Recomendaciones de sistemas", "Planificación de presupuesto", "Especificaciones técnicas"]
     },
-    "modernization": {
-      "title": "Modernización",
-      "description": "Actualice sus sistemas de elevadores existentes con la última tecnología y características de seguridad."
+    "lock": {
+      "title": "Modernización de Cerraduras de Puertas",
+      "description": "Sistemas avanzados de monitoreo de cerraduras de puertas para mayor seguridad en elevadores.",
+      "fixtures": ["Sistema conforme al código", "Sistema de seguridad de puertas"]
     },
-    "inspection": {
-      "title": "Inspección",
-      "description": "Inspecciones de seguridad exhaustivas para garantizar el cumplimiento de todas las normativas."
+    "3d": {
+      "title": "Instalación de Bordes de Proximidad 3D",
+      "description": "Tecnología de bordes de proximidad 3D para mejorar la seguridad y operación de puertas.",
+      "fixtures": ["Detección avanzada de obstáculos", "Reducción de incidentes con puertas", "Integración perfecta", "Vida útil extendida del equipo"]
     },
     "cta": "Contáctenos hoy para una consulta gratuita",
     "buttonText": "Póngase en Contacto"

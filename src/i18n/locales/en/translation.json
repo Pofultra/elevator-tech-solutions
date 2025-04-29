@@ -74,25 +74,30 @@
     "title": "Our Services",
     "subtitle": "Professional Elevator Solutions",
     "intro": "We offer a comprehensive range of elevator services to meet all your needs:",
-    "installation": {
-      "title": "Installation",
-      "description": "Professional installation of new elevator systems for residential and commercial buildings."
+    "certification": {
+      "title": "Certification",
+      "description": "Professional certification services to ensure your elevators meet all local and state regulations.",
+      "fixtures":["Annual inspections","Code compiliance verification"]
     },
-    "maintenance": {
-      "title": "Maintenance",
-      "description": "Regular maintenance services to ensure your elevators operate safely and efficiently."
+    "violations": {
+      "title": "Violations Corrections",
+      "description": "Expert solutions to address and resolve elevator code violations promptly and effectively.",
+      "fixtures":["Elevator propair for reinspection"]
     },
-    "repair": {
-      "title": "Repair",
-      "description": "Fast and reliable repair services for all elevator makes and models."
+    "consulting": {
+      "title": "Elevator Consulting",
+      "description": "Professional guidance for elevator systems.",
+      "fixtures":["System recomendations","Budget planning","Technical specifications"]
     },
-    "modernization": {
-      "title": "Modernization",
-      "description": "Upgrade your existing elevator systems with the latest technology and safety features."
+    "lock": {
+      "title": "Door Lock Modernization",
+      "description": "Advanced door lock monitoring systems for enhanced elevator safety and security.",
+      "fixtures":["Code-compliant sytem","Door safety system"]
     },
-    "inspection": {
-      "title": "Inspection",
-      "description": "Thorough safety inspections to ensure compliance with all regulations."
+    "3d": {
+      "title": "3D Proximity Edge Installation",
+      "description": "3D proximity edge technology for improved door safety and operation.",
+      "fixtures":["Advance obstacule detection","Reduce door incidents","Seamless integration","Extended equipament life"]
     },
     "cta": "Contact us today for a free consultation",
     "buttonText": "Get in Touch"
